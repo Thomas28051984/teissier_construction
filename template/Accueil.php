@@ -16,7 +16,7 @@ require_once ('doctype.php');
     </div>
 
     <div>
-        <img src="">
+        <img class="image_maçon" src="../assets/images/industrial-builder.jpg">
     </div>
 
 <div>

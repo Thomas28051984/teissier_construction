@@ -3,8 +3,8 @@
         <footer>
             <ul>
                 <li><a href="PageCookies.php">Cookies</a></li>
-                <li><a href="PageConfidentialite.php.php">Conditions générales</a></li>
-                <li><a href="Pagementionlegale.php.php">Mentions légales</a></li>
+                <li><a href="PageConfidentialite.php">Conditions générales</a></li>
+                <li><a href="Pagementionlegale.php">Mentions légales</a></li>
             </ul>
         </footer>
     </div>
