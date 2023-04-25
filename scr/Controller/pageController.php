@@ -1,6 +1,6 @@
 <?php
 
-class PageController extends Controller
+class pageController extends Controller
 {
 
     public function __construct()
@@ -40,11 +40,13 @@ class PageController extends Controller
             }
 
 
-            $this->render('pageInscription');
+            $this->render('PageInscription');
         } catch (Exception $exception) {
             die($exception->getMessage());
         }
     }
+}
+
 //
 //    public function login(GestionSQL $gestionSQL, $request)
 //    {

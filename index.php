@@ -5,7 +5,7 @@ require_once('config.php');
 require_once('src/GestionSQL.php');
 require_once('src/Controller.php');
 
-require_once ('scr/Controller/PageController.php');
+require_once('scr/Controller/pageController.php');
 require_once ('scr/Repository/ClientRepository.php');
 
 try {
@@ -20,7 +20,7 @@ try {
 
 if (!empty($_GET['security'])) {
 
-    $pageController = new PageController();
+    $pageController = new pageController();
 
 
     switch ($_GET['security']) {
@@ -39,5 +39,6 @@ else {
         $accueilController = new AccueilController();
         $accueilController->accueil($gestionSQL);
     }
+}
 
 

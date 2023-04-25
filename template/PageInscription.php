@@ -1,6 +1,6 @@
 <?php
 require_once('doctype.php');
-require_once ('src/Controller/PageController.php')
+require_once ('../scr/Controller/pageController.php');
 ?>
 <body>
 
