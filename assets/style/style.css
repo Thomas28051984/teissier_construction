@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    background: lightgray;
+    background-color: black;
+    /*margin: 0;*/
     text-align: center;
     font-family: sans-serif;
     color: #fefefe;
@@ -74,4 +74,33 @@ span {
     to {
         transform: rotateY(-360deg);
     }
+}
+
+textarea {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.image_maçon {
+    height: 25%;
+    width: 100%;
+}
+
+.logoentreprise{
+    height: 75px;
+    width: 75px;
 }

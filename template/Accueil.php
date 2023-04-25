@@ -37,19 +37,7 @@ require_once ('doctype.php');
 
     </div>
 
-    <section>
-        <div><a href="Pageplansite.php"><h3>Plan du site</h3></a></div>
-        <div><h3>Infos pratiques</h3>
-        <ul>
-            <li>06 26 95 37 86</li>
-            <li>6 chemin de transide et cabrie</li>
-            <div><li><dt date="0">Lun - Ven</dt>
-                <dd><time>08:00</time> - <time>18:00</time></dd>
-                </li>
-        </div
-        </ul>
-        </div>
-    </section>
+
 
 
 

@@ -1,4 +1,5 @@
 <?php
+require_once ('../scr/Controller.php');
 
 class pageController extends Controller
 {
@@ -22,7 +23,7 @@ class pageController extends Controller
             if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
                 $messageErreur = 'mail invalide';
             }
-            if (!empty($password) && !empty($prenom) && !empty($nom)) {
+            if (!empty($password) && !empty($prenom) && !empty($nom) && !empty($mail)) {
                 $data = [
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
@@ -40,36 +41,37 @@ class pageController extends Controller
             }
 
 
+
             $this->render('PageInscription');
         } catch (Exception $exception) {
             die($exception->getMessage());
         }
+
     }
 }
 
-//
-//    public function login(GestionSQL $gestionSQL, $request)
-//    {
-//        $message = '';
-//        $mail = trim($request['mail'] ?? '');
-//        $password = trim($request['password'] ?? '');
-//        $check = new GestionSQL();
-//        $data = $check->find('SELECT mail
+//public function login(GestionSQL $gestionSQL, $request)
+//{
+//    $message = '';
+//    $mail = trim($request['mail'] ?? '');
+//    $password = trim($request['password'] ?? '');
+//    $check = new GestionSQL();
+//    $data = $check->find('SELECT mail
 //                                    FROM user WHERE mail = :mail', ['mail' => $mail]);
-//        if (count($data) > 0) {
-//            $_SESSION['mail'] = $data['mail'];
-//            echo $_SESSION['mail'] = 'connecté en tant que <br>' . $mail;
+//    if (count($data) > 0) {
+//        $_SESSION['mail'] = $data['mail'];
+//        echo $_SESSION['mail'] = 'connecté en tant que <br>' . $mail;
 //
-//            $this->redir('index');
-//        }
-//        $this->render('pageConnexion');
+//        $this->redir('index');
 //    }
+//    $this->render('pageConnexion');
+//}
 //
 //
-//    public function logout(GestionSQL $gestionSQL)
-//    {
-//        session_destroy();
-//        $this->render('accueil');
-//    }
+//public function logout(GestionSQL $gestionSQL)
+//{
+//    session_destroy();
+//    $this->render('accueil');
+//}
 //
 //}

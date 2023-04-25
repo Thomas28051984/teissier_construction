@@ -1,6 +1,7 @@
 <?php
 require_once('doctype.php');
 require_once ('../scr/Controller/pageController.php');
+
 ?>
 <body>
 
@@ -34,6 +35,8 @@ require_once ('../scr/Controller/pageController.php');
     </section>
 </div>
 
-
-
 </body>
+
+<?php
+require_once ('footer.php');
+?>
