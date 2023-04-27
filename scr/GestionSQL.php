@@ -78,4 +78,10 @@ class GestionSQL
 
         return $prepare->rowCount();
     }
+
+    public function displayavis(string $query, array $avis = []):array
+    {
+        $prepare = $this->con->prepare($query);
+        $prepare->execute($avis);
+    }
 }

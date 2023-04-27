@@ -1,5 +1,5 @@
 <?php
-require_once ('../scr/Controller.php');
+
 
 class pageController extends Controller
 {
@@ -33,8 +33,8 @@ class pageController extends Controller
                 ];
                 $inscriptionRepository = new ClientRepository($gestionSQL);
                 $inscriptionRepository->insert($data);
-                $messageReussite = 'Inscription réussie !';
-                echo $messageReussite;
+                $messagereussite = 'Inscription réussie !';
+                echo $messagereussite;
             } else {
 
                 $messageErreur = 'Veuillez completer tous les champs';
@@ -42,36 +42,46 @@ class pageController extends Controller
 
 
 
-            $this->render('PageInscription');
+            $this->render('Accueil');
         } catch (Exception $exception) {
             die($exception->getMessage());
         }
 
     }
+
+
+    public function login(GestionSQL $gestionSQL, $request)
+    {
+        $message = '';
+        $mail = trim($request['mail'] ?? '');
+        $password = trim($request['password'] ?? '');
+        $check = new GestionSQL();
+        $data = $check->find('SELECT mail
+                                    FROM user WHERE mail = :mail', ['mail' => $mail]);
+        $messageErreur = '';
+        if (count($data) > 0) {
+            $_SESSION['mail'] = $data['mail'];
+            echo $_SESSION['mail'] = 'Connecté en tant que <br>' . $mail;
+
+            $this->redir('index');
+        }
+
+        $this->render('PageClient');
+    }
+
+
+
+
+
+public function logout() {
+    // Détruire la session existante
+    session_destroy();
+
+    // Rediriger vers la page index
+    header("Location: index.php");
+    exit();
+}
 }
 
-//public function login(GestionSQL $gestionSQL, $request)
-//{
-//    $message = '';
-//    $mail = trim($request['mail'] ?? '');
-//    $password = trim($request['password'] ?? '');
-//    $check = new GestionSQL();
-//    $data = $check->find('SELECT mail
-//                                    FROM user WHERE mail = :mail', ['mail' => $mail]);
-//    if (count($data) > 0) {
-//        $_SESSION['mail'] = $data['mail'];
-//        echo $_SESSION['mail'] = 'connecté en tant que <br>' . $mail;
-//
-//        $this->redir('index');
-//    }
-//    $this->render('pageConnexion');
-//}
-//
-//
-//public function logout(GestionSQL $gestionSQL)
-//{
-//    session_destroy();
-//    $this->render('accueil');
-//}
-//
-//}
+
+

@@ -2,11 +2,16 @@
 
 require_once('config.php');
 
-require_once('src/GestionSQL.php');
-require_once('src/Controller.php');
+require_once('scr/GestionSQL.php');
+require_once('scr/Controller.php');
+
+require_once ('scr/Controller/accueilController.php');
 
 require_once('scr/Controller/pageController.php');
 require_once ('scr/Repository/ClientRepository.php');
+
+require_once ('scr/Repository/AvisRepository.php');
+require_once ('scr/Controller/avisController.php');
 
 try {
 
@@ -34,11 +39,13 @@ if (!empty($_GET['security'])) {
 
         case 'deconnexion':
             $pageController->logout($gestionSQL);
+
     }
+}
 else {
         $accueilController = new AccueilController();
         $accueilController->accueil($gestionSQL);
-    }
+
 }
 
 

@@ -14,11 +14,13 @@
                     </ul>
                 </div>
             </section>
+            <section>
             <ul>
                 <li><a href="PageCookies.php">Cookies</a></li>
                 <li><a href="PageConfidentialite.php">Conditions générales</a></li>
                 <li><a href="Pagementionlegale.php">Mentions légales</a></li>
             </ul>
+            </section>
         </footer>
     </div>
     <p><b>Copyright © <?php echo date("Y"); ?> TEISSIER Construction</b></p>

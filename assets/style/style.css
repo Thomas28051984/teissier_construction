@@ -1,10 +1,19 @@
 body {
-    background-color: black;
-    /*margin: 0;*/
+    background-color: cornsilk;
     text-align: center;
     font-family: sans-serif;
-    color: #fefefe;
+    color: black;
 }
+
+header{
+    background-color: red;
+}
+
+footer{
+    background-color: aqua;
+
+}
+
 .container {
     position: relative;
     width: 320px;

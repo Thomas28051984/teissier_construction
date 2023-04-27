@@ -2,6 +2,8 @@
 
 abstract class Controller
 {
+    private $gestionSQL;
+
     public function render(string $nomDuFichier, array $data = []): void
     {
         extract($data, EXTR_SKIP);
@@ -57,5 +59,10 @@ abstract class Controller
         }
 
         return true;
+    }
+
+    public function findAll()
+    {
+        return $this->gestionSQL->findAll('select * from page');
     }
 }

@@ -28,7 +28,15 @@ require_once ('doctype.php');
 </div>
 
 <section>
-    <div><p>Avis laisser par les clients</p></div>
+    <div>
+        <?php
+        foreach ($avis_client as $avis){
+            echo '<h2>' . $avis['date_publication'] . '</h2>';
+            echo '<p>' . $avis['avis'] . '</p>';
+        }
+        ?>
+    </div>
+<!--    <div><p>Avis laisser par les clients</p></div>-->
 </section>
 
     <div class="map">
@@ -36,12 +44,6 @@ require_once ('doctype.php');
     <p>Map API</p>
 
     </div>
-
-
-
-
-
-
 
 </main>
 
