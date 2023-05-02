@@ -61,8 +61,4 @@ abstract class Controller
         return true;
     }
 
-    public function findAll()
-    {
-        return $this->gestionSQL->findAll('select * from page');
-    }
 }

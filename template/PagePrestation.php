@@ -10,7 +10,7 @@ require_once ('doctype.php');
 <div><img src="">Prestations 3</div>
 </section>
 
-
+</body>
 <?php
 require_once ('footer.php');
 ?>

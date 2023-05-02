@@ -11,22 +11,24 @@ require_once ('doctype.php');
 <h2>Avis déposés</h2>
 
 <h2>Ajouter un chantier</h2>
-<form>
+
     <form action="PageChantier.php">
         <button type="submit">Ajouter</button>
 </form>
 
 <h2>Envoyer une facture</h2>
-<form>
+
     <form action="PageFactures.php">
         <button type="submit">Envoyer</button>
 </form>
 
 <h2>Transférer des photos</h2>
-<form>
+
     <form action="PagePhotos.php">
         <button type="submit">Transférer</button>
 </form>
+
+</body>
 
 <?php
 

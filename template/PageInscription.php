@@ -1,14 +1,12 @@
 <?php
 require_once('doctype.php');
-require_once ('../scr/Controller/pageController.php');
-
 ?>
-<body>
 
-<h4 class="inscriptionTitre"><u>Inscription</u></h4>
+
+
 <div class="main">
     <section class="pageInscription" role="contentinfo">
-
+        <h4 class="inscriptionTitre">Je crée mon compte client:</h4>
         <div class="mb-3 ms-5 me-5">
             <form method="post" action="">
 
@@ -31,6 +29,7 @@ require_once ('../scr/Controller/pageController.php');
                         <input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
 
                 </div>
+                <br><br>
                 <button type="submit" class="btn btn-primary">Inscription</button>
             </form>
         </div>

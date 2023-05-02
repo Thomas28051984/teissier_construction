@@ -7,10 +7,10 @@ class AccueilController extends Controller
     {
         try {
             $avisrepository = new AvisRepository($gestionSQL);
-            $avis_client = $avisrepository->displayavis();
+            $avis_client = $avisrepository->findLimit(limit: 2);
             $this->render('accueil',
                 [
-                    'avisclient' => $avis_client
+                    'avis client' => $avis_client
                 ]);
 
         } catch (Exception $exception) {

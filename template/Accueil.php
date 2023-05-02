@@ -1,6 +1,7 @@
 <?php
 require_once ('doctype.php');
 ?>
+
 <main>
     <div class="histoire">
     <h1>Histoire de l'entreprise</h1>
@@ -15,28 +16,28 @@ require_once ('doctype.php');
 </p>
     </div>
 
-    <div>
-        <img class="image_maçon" src="../assets/images/industrial-builder.jpg">
+    <div id="image_maçon">
+        <img  src="../assets/images/industrial-builder.jpg">
     </div>
 
 <div>
     <form>
-        <button class="mailto"> <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a></button>
-        <button class="telephoner"> <a href="tel:+33626953786">Cliquez ici pour appeler le 06 26 95 37 86</a>
-        </button>
+        <button class="mailto"><a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a></button>
+        <button class="telephoner"><a href="tel:+33626953786">Cliquez ici pour appeler le 06 26 95 37 86</a></button>
     </form>
 </div>
 
-<section>
+<section class="avis-clients">
     <div>
         <?php
+        $avis_client = [];
         foreach ($avis_client as $avis){
             echo '<h2>' . $avis['date_publication'] . '</h2>';
             echo '<p>' . $avis['avis'] . '</p>';
         }
         ?>
     </div>
-<!--    <div><p>Avis laisser par les clients</p></div>-->
+
 </section>
 
     <div class="map">
@@ -46,6 +47,8 @@ require_once ('doctype.php');
     </div>
 
 </main>
+
+</body>
 
 <?php
 require_once ('footer.php')

@@ -47,5 +47,6 @@ else {
         $accueilController->accueil($gestionSQL);
 
 }
+?>
 
 

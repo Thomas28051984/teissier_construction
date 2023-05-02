@@ -159,3 +159,4 @@ L'Éditeur s'engage à vous offrir la possibilité de vous faire restituer l'ens
 vous concernant sur simple demande. L'Utilisateur se voit ainsi garantir une meilleure
 maîtrise de ses données, et garde la possibilité de les réutiliser. Ces données devront être
 fournies dans un format ouvert et aisément réutilisable.
+</body>

@@ -7,7 +7,7 @@ require_once ('doctype.php');
     <input>
 </form>
 
-
+</body>
 <?php
 require_once ('footer.php');
 ?>
