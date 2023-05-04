@@ -48,7 +48,7 @@ require_once ('doctype.php');
 
 </main>
 
-</body>
+
 
 <?php
 require_once ('footer.php')

@@ -7,7 +7,7 @@ abstract class Controller
     public function render(string $nomDuFichier, array $data = []): void
     {
         extract($data, EXTR_SKIP);
-        require_once('template/' . $nomDuFichier . '.php');
+        require_once($nomDuFichier . '.php');
     }
 
     /**

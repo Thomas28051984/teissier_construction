@@ -3,7 +3,7 @@
 
 class pageController extends Controller
 {
-
+//Je crée la méthode construct et la session start pour la connexion de l'utilisateur
     public function __construct()
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -14,16 +14,22 @@ class pageController extends Controller
 
     public function register(GestionSQL $gestionSQL, $request)
     {
+//        Je crée les variables du formulaire et je supprime les espaces
         $nom = trim($request['nom'] ?? '');
         $prenom = trim($request['prenom'] ?? '');
         $mail = trim($request['mail'] ?? '');
         $password = trim($request['password'] ?? '');
-        $messageErreur = '';
+        $messageErreur = 'mail invalide';
+
         try {
+//            Je vérifie que le mail est correctement tapé
             if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                $messageErreur = 'mail invalide';
+
+                echo $messageErreur;
+                die();
             }
-            if (!empty($password) && !empty($prenom) && !empty($nom) && !empty($mail)) {
+//            Je vérifie que les champs existent et qu'ils ne sont pas vide
+            if (!empty($password) && !empty($prenom) && !empty($nom) && !empty($mail) && isset($_POST[$nom]) && isset($_POST[$prenom]) && isset($_POST[$mail])) {
                 $data = [
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
@@ -32,7 +38,7 @@ class pageController extends Controller
 
                 ];
                 $inscriptionRepository = new ClientRepository($gestionSQL);
-                $inscriptionRepository->insert($data);
+                $inscriptionRepository->insertclient($data);
                 $messagereussite = 'Inscription réussie !';
                 echo $messagereussite;
             } else {
@@ -49,16 +55,17 @@ class pageController extends Controller
 
     }
 
-
+//    Je crée la méthode pour permettre la connexion du client
     public function login(GestionSQL $gestionSQL, $request)
     {
-        $message = '';
+
+
         $mail = trim($request['mail'] ?? '');
         $password = trim($request['password'] ?? '');
         $check = new GestionSQL();
         $data = $check->find('SELECT mail
                                     FROM user WHERE mail = :mail', ['mail' => $mail]);
-        $messageErreur = '';
+        $messageErreur = 'hyterhtyh';
         if (count($data) > 0) {
             $_SESSION['mail'] = $data['mail'];
             echo $_SESSION['mail'] = 'Connecté en tant que <br>' . $mail;
@@ -71,7 +78,7 @@ class pageController extends Controller
 
 
 
-
+//Je crée la méthode qui va servir de déconnexion du client sur sa session
 
 public function logout() {
     // Détruire la session existante

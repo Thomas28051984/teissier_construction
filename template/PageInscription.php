@@ -11,22 +11,22 @@ require_once('doctype.php');
             <form method="post" action="">
 
                 <label for="nom" class="form-label"><b>Nom</b></label>
-                    <input type="text" class="form-control" name="nom"/>
+                    <input type="text" class="form-control" name="nom" id="nom">
 
                 <br>
 
                 <label for="prenom" class="form-label"><b>Prenom</b></label>
-                    <input type="text" class="form-control" name="prenom"/>
+                    <input type="text" class="form-control" name="prenom" id="prenom">
 
                 <br>
 
                 <label for="mail"><b>Mail</b></label>
-                    <input type="email" name="mail" class="form-control" id="exampleInputEmail1"
+                    <input type="email" name="mail" class="form-control" id="mail"
                            aria-describedby="emailHelp"/>
 
                 <div class="mb-3">
                     <label for="password" class="form-label"><b>Mot de passe</b></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
+                        <input type="password" class="form-control" id="password" name="password">
 
                 </div>
                 <br><br>
@@ -36,7 +36,7 @@ require_once('doctype.php');
     </section>
 </div>
 
-</body>
+
 
 <?php
 require_once ('footer.php');

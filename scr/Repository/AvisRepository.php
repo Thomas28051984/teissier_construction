@@ -15,7 +15,7 @@ class AvisRepository
         VALUES (NULL, :now, :message, 1)");
     }
 
-    public function findLimit(int $limit)
+    public function avisLimit(int $limit)
     {
         return $this->gestionSQL->findAll('SELECT * FROM avis_client'.$limit);
     }
