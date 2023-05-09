@@ -10,3 +10,5 @@
 <?php
 require_once ('banniere.php');
 ?>
+
+<body>

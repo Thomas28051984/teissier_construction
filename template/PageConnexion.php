@@ -20,7 +20,7 @@ require_once('doctype.php');
 
     </section>
 
-</body>
+
 
 <?php
 require_once ('footer.php');
