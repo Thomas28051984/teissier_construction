@@ -16,7 +16,7 @@ class pageController extends Controller
     {
 //        Je crée les variables du formulaire et je supprime les espaces
         $nom = trim($request['nom'] ?? '');
-        $prenom = trim($request['prenom'] ?? '');
+        $prénom = trim($request['prénom'] ?? '');
         $mail = trim($request['mail'] ?? '');
         $password = trim($request['password'] ?? '');
         $messageErreur = 'mail invalide';
@@ -32,9 +32,9 @@ class pageController extends Controller
             if (!empty($password) && !empty($prenom) && !empty($nom) && !empty($mail) && isset($_POST[$nom]) && isset($_POST[$prenom]) && isset($_POST[$mail])) {
                 $data = [
                     'nom' => htmlspecialchars($nom),
-                    'prenom' => htmlspecialchars($prenom),
-                    'mail' => htmlspecialchars($mail) ,
-                    'password' => password_hash($),
+                    'prenom' => htmlspecialchars($prénom),
+                    'mail' => htmlspecialchars($mail),
+                    'password' => md5($password),
 
                 ];
                 $inscriptionRepository = new ClientRepository($gestionSQL);

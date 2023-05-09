@@ -15,8 +15,8 @@ require_once('doctype.php');
 
                 <br>
 
-                <label for="prenom" class="form-label"><b>Prenom</b></label>
-                    <input type="text" class="form-control" name="prenom" id="prenom">
+                <label for="prénom" class="form-label"><b>Prénom</b></label>
+                    <input type="text" class="form-control" name="prénom" id="prénom">
 
                 <br>
 
