@@ -33,14 +33,15 @@ class pageController extends Controller
                 $data = [
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
-                    'mail' => htmlspecialchars($mail),
-                    'password' => md5($password),
+                    'mail' => htmlspecialchars($mail) ,
+                    'password' => password_hash($),
 
                 ];
                 $inscriptionRepository = new ClientRepository($gestionSQL);
-                $inscriptionRepository->insertclient($data);
+                $inscriptionRepository->insert($data);
                 $messagereussite = 'Inscription réussie !';
                 echo $messagereussite;
+
             } else {
 
                 $messageErreur = 'Veuillez completer tous les champs';
@@ -64,7 +65,7 @@ class pageController extends Controller
         $password = trim($request['password'] ?? '');
         $check = new GestionSQL();
         $data = $check->find('SELECT mail
-                                    FROM user WHERE mail = :mail', ['mail' => $mail]);
+                                    FROM client WHERE mail = :mail', ['mail' => $mail]);
         $messageErreur = 'hyterhtyh';
         if (count($data) > 0) {
             $_SESSION['mail'] = $data['mail'];

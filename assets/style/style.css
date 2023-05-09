@@ -1,5 +1,5 @@
 body {
-    background-color: cornsilk;
+    background-image: url("../images/Wallpaper/light-gray-concrete-wall-min.jpg");
     text-align: center;
     font-family: sans-serif;
     color: black;
@@ -109,9 +109,6 @@ label {
 
 }
 
-#carroussel {
-
-}
 
 ul {
     list-style-type: none;

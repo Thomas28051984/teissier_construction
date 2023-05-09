@@ -2,7 +2,7 @@
 require_once ('doctype.php');
 ?>
 
-<main>
+<main role="main">
     <div class="histoire">
     <h1>Histoire de l'entreprise</h1>
 <p>
@@ -16,9 +16,9 @@ require_once ('doctype.php');
 </p>
     </div>
 
-    <div id="image_maçon">
-        <img  src="../assets/images/industrial-builder.jpg">
-    </div>
+<!--    <div id="image_maçon">-->
+<!--        <img  src="../assets/images/industrial-builder.jpg">-->
+<!--    </div>-->
 
 <div>
     <form>
@@ -27,24 +27,24 @@ require_once ('doctype.php');
     </form>
 </div>
 
-<section class="avis-clients">
-    <div>
-        <?php
-        $avis_client = [];
-        foreach ($avis_client as $avis){
-            echo '<h2>' . $avis['date_publication'] . '</h2>';
-            echo '<p>' . $avis['avis'] . '</p>';
-        }
-        ?>
-    </div>
+<!--<section class="avis-clients">-->
+<!--    <div>-->
+<!--        --><?php
+//        $avis_client = [];
+//        foreach ($avis_client as $avis){
+//            echo '<h2>' . $avis['date_publication'] . '</h2>';
+//            echo '<p>' . $avis['avis'] . '</p>';
+//        }
+//        ?>
+<!--    </div>-->
+<!---->
+<!--</section>-->
 
-</section>
-
-    <div class="map">
-
-    <p>Map API</p>
-
-    </div>
+<!--    <div class="map">-->
+<!---->
+<!--    <p>Map API</p>-->
+<!---->
+<!--    </div>-->
 
 </main>
 

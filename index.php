@@ -38,15 +38,31 @@ if (!empty($_GET['security'])) {
             break;
 
         case 'deconnexion':
-            $pageController->logout($gestionSQL);
+            $pageController->logout();
 
     }
-}
-else {
-        $accueilController = new AccueilController();
-        $accueilController->accueil($gestionSQL);
+//} elseif (!empty($_GET['immo'])) {
+//    $addImmoController = new ImmoController();
+//
+//    switch ($_GET['immo']) {
+//        case '':
+//            $addImmoController->ajouterBien($gestionSQL, $_POST);
+//            break;
+//    }
+//} elseif (!empty($_GET['achat'])) {
+//    $immoController = new ImmoController();
+//
+//    switch ($_GET['achat']) {
+//        case '':
+//            $immoController->recherche($gestionSQL, $_POST);
+//            break;
+//    }
 
+} else {
+    $accueilController = new AccueilController();
+    $accueilController->accueil($gestionSQL);
 }
+
 ?>
 
 

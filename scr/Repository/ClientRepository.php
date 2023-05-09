@@ -7,7 +7,7 @@ class ClientRepository
     {
     }
 
-    public function insertclient(array $data)
+    public function insert(array $data)
     {
 //        phrase du dessous = appel la classe GestionSQL pour pouvoir utiliser les fonctions de celle ci
 //        ne pas oublier que pour utiliser $this il faut mep construct et déclarer attribut(s)
