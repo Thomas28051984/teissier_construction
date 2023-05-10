@@ -35,4 +35,4 @@ require_once ('doctype.php');
 require_once ('footer.php')
 ?>
 
-</body>
+

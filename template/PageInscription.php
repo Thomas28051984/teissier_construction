@@ -9,22 +9,22 @@ require_once('doctype.php');
             <form method="post" action="">
 
                 <label for="nom" class="form-label"><b>Nom</b></label>
-                    <input type="text" class="form-control" name="nom" id="nom">
+                    <input type="text" class="form-control" name="nom" id="nom" required>
 
                 <br>
 
                 <label for="prénom" class="form-label"><b>Prénom</b></label>
-                    <input type="text" class="form-control" name="prénom" id="prénom">
+                    <input type="text" class="form-control" name="prénom" id="prénom" required>
 
                 <br>
 
                 <label for="mail" class="form-label"><b>Mail</b></label>
-                    <input type="email" name="mail" class="form-control" id="mail"
+                    <input type="email" name="mail" class="form-control" required id="mail"
                            aria-describedby="emailHelp"/>
 
                 <div class="mb-3">
                     <label for="password" class="form-label"><b>Mot de passe</b></label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <input type="password" class="form-control" id="password" name="password" required>
 
                 </div>
                 <br><br>

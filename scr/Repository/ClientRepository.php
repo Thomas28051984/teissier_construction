@@ -11,7 +11,7 @@ class ClientRepository
     {
 //        phrase du dessous = appel la classe GestionSQL pour pouvoir utiliser les fonctions de celle ci
 //        ne pas oublier que pour utiliser $this il faut mep construct et déclarer attribut(s)
-        return $this->gestionSQL->insert("INSERT INTO client (`id`, 'id_societe'`nom`, `prenom`, `mail`, `password`, `id_societe`, `id_role`) 
+        return $this->gestionSQL->insert("INSERT INTO client (`id`, `nom`, `prenom`, `mail`, `password`, `id_societe`, `id_role`) 
         VALUES (NULL, :nom, :prenom, :mail, :password, 1, 1)", $data);
     }
 }

@@ -37,14 +37,14 @@ class pageController extends Controller
                     'password' => md5($password),
 
                 ];
-                $inscriptionRepository = new ClientRepository($gestionSQL);
-                $inscriptionRepository->insert($data);
+                $clientRepository = new ClientRepository($gestionSQL);
+                $clientRepository->insert($data);
                 $messagereussite = 'Inscription réussie !';
+                $messageErreur == 'Veuillez completer tous les champs';
                 echo $messagereussite;
 
             } else {
-
-                $messageErreur = 'Veuillez completer tous les champs';
+                echo $messageErreur;
             }
 
 
@@ -62,7 +62,6 @@ class pageController extends Controller
 
 
         $mail = trim($request['mail'] ?? '');
-        $password = trim($request['password'] ?? '');
         $check = new GestionSQL();
         $data = $check->find('SELECT mail
                                     FROM client WHERE mail = :mail', ['mail' => $mail]);

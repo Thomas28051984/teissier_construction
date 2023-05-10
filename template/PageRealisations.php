@@ -6,10 +6,10 @@ require_once ('doctype.php');
     <p>Voici quelques photos de nos réalisations.</p>
 
 <section class="photorealisation">
-    <div><img src="../assets/images/Réalisation/attachment1683192326902.jpg"></div>
-    <div><img src="../assets/images/Réalisation/attachment1683192326981.jpg"></div>
-    <div><img src="../assets/images/Réalisation/attachment1683192326929.jpg"></div>
-    <div><img src="../assets/images/Réalisation/attachment1683192354960.jpg"></div>
+    <div><img src="../assets/images/Réalisation/attachment1683192326902.jpg" alt=""></div>
+    <div><img src="../assets/images/Réalisation/attachment1683192326981.jpg" alt=""></div>
+    <div><img src="../assets/images/Réalisation/attachment1683192326929.jpg" alt=""></div>
+    <div><img src="../assets/images/Réalisation/attachment1683192354960.jpg" alt=""></div>
 </section>
 
 

@@ -52,12 +52,13 @@ header{
 /*    display: none;*/
 /*}*/
 
+/*enlève les puces à liste*/
 .menu li {
     list-style: none;
     }
 
 footer{
-
+bottom: 0px;
 }
 
 .container {
@@ -94,16 +95,7 @@ label {
 
 #image_maçon {
     height: 200px;
-    width: 200px;
-}
-
-#pied-de-page {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-
+    width: 100%
 }
 
 ul {

@@ -24,8 +24,8 @@ class chantierController extends Controller
                     ];
                     var_dump($data);
 
-                    $inscriptionRepository = new ChantierRepository($gestionSQL);
-                    $inscriptionRepository->insert($data);
+                    $chantierRepository = new ChantierRepository($gestionSQL);
+                    $chantierRepository->insert($data);
 
                     echo $messagereussite;
 

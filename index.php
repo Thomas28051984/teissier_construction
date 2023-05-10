@@ -44,6 +44,7 @@ if (!empty($_GET['security'])) {
             $pageController->logout();
 
     }
+
 //} elseif (!empty($_GET['immo'])) {
 //    $addImmoController = new ImmoController();
 //
@@ -66,6 +67,6 @@ if (!empty($_GET['security'])) {
     $accueilController->accueil($gestionSQL);
 }
 
-?>
+
 
 
