@@ -2,11 +2,9 @@
 require_once('doctype.php');
 ?>
 
-
-
 <div class="main">
     <section class="pageInscription" role="contentinfo">
-        <h4 class="inscriptionTitre">Je crée mon compte client:</h4>
+        <h4>Je crée mon compte client:</h4>
         <div class="mb-3 ms-5 me-5">
             <form method="post" action="">
 
@@ -20,7 +18,7 @@ require_once('doctype.php');
 
                 <br>
 
-                <label for="mail"><b>Mail</b></label>
+                <label for="mail" class="form-label"><b>Mail</b></label>
                     <input type="email" name="mail" class="form-control" id="mail"
                            aria-describedby="emailHelp"/>
 

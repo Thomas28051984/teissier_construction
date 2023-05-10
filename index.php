@@ -13,6 +13,9 @@ require_once ('scr/Repository/ClientRepository.php');
 require_once ('scr/Repository/AvisRepository.php');
 require_once ('scr/Controller/avisController.php');
 
+require_once ('scr/Repository/ChantierRepository.php');
+require_once ('scr/Controller/chantierController.php');
+
 try {
 
     session_start();

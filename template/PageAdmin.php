@@ -10,6 +10,8 @@ require_once ('doctype.php');
 
 <h2>Avis déposés</h2>
 
+<hr>
+
 <h2>Ajouter un chantier</h2>
 
     <form action="PageChantier.php">
