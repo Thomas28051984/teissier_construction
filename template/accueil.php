@@ -1,38 +1,52 @@
 <?php
-require_once ('doctype.php');
+require_once('doctype.php');
+
 ?>
 
-<main role="main">
-    <div class="histoire">
-    <h1>Histoire de l'entreprise</h1>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Praesent id mollis dolor. Aenean vel finibus erat. Sed sit amet pretium sapien.
-    Integer vitae consectetur felis. Morbi id ipsum in mauris dapibus euismod.
-    Nulla porta euismod nulla vitae dictum. Nulla semper luctus molestie.
-    Donec sagittis efficitur orci et condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    Mauris arcu risus, venenatis et vulputate quis, semper at nisl. Etiam tincidunt leo sit amet elit accumsan porttitor.
-    Mauris tincidunt placerat vulputate. Fusce viverra porta magna.
-</p>
-    </div>
+    <main role="main">
+        <div class="histoire">
+            <h1>Histoire de l'entreprise</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent id mollis dolor. Aenean vel finibus erat. Sed sit amet pretium sapien.
+                Integer vitae consectetur felis. Morbi id ipsum in mauris dapibus euismod.
+                Nulla porta euismod nulla vitae dictum. Nulla semper luctus molestie.
+                Donec sagittis efficitur orci et condimentum. Orci varius natoque penatibus et magnis dis parturient
+                montes,
+                nascetur ridiculus mus.
+                Mauris arcu risus, venenatis et vulputate quis, semper at nisl. Etiam tincidunt leo sit amet elit
+                accumsan
+                porttitor.
+                Mauris tincidunt placerat vulputate. Fusce viverra porta magna.
+            </p>
+        </div>
 
-    <div id="image_maçon">
-        <img  src="../assets/images/industrial-builder.jpg" alt="image maçon">
-    </div>
+        <div id="image_maçon">
+            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
+        </div>
 
-<div>
-    <form>
-        <button class="mailto"><a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a></button>
-        <button class="telephoner"><a href="tel:+33626953786">Cliquez ici pour appeler le 06 26 95 37 86</a></button>
-    </form>
-</div>
+        <div>
 
-</main>
+            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a>
 
+            <a href="tel:+33626953786" class="btn btn-primary">Cliquez ici pour appeler le 06 26 95 37 86</a>
+
+
+        </div>
+
+        <?php
+        foreach ($avisclients as $avis) {
+
+            echo '<h2>' . $avis['avis'] . '</h2>';
+
+        }
+        ?>
+
+    </main>
 
 
 <?php
-require_once ('footer.php')
-?>
+require_once('footer.php');
+
 
 

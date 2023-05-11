@@ -11,13 +11,13 @@ class AvisRepository
     {
 //        phrase du dessous = appel la classe GestionSQL pour pouvoir utiliser les fonctions de celle-ci
 //        ne pas oublier que pour utiliser $this il faut mep construct et déclarer attribut(s)
-        return $this->gestionSQL->insert("INSERT INTO avis_client (`id`, `date_publication`, `message`,`id_societe`) 
+        return $this->gestionSQL->insert("INSERT INTO avis_client2 (`id`, `date_publication`, `message`,`id_societe`) 
         VALUES (NULL, :now, :message, 1)");
     }
 
-    public function avisLimit(int $limit)
+    public function limit(int $limit)
     {
-        return $this->gestionSQL->findAll('SELECT * FROM avis_client'.$limit);
+        return $this->gestionSQL->findAll('SELECT * FROM avis_client2 limit'. $limit);
     }
 }
 

@@ -13,7 +13,7 @@ require_once ('doctype.php');
     <label for="ville" class="form-label"><b>Ville</b></label>
     <input type="text" class="form-control" name="ville" id="ville" placeholder="ville"><br>
 
-    <button type="submit" class="btn btn-primary">Inscription</button>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
 
 </form>
 

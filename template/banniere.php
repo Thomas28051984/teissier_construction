@@ -4,10 +4,11 @@
     </a>
     <nav role="navigation" class="navigation">
         <ul>
-            <li><a href="PageInscription.php">Inscription</a></li>
-            <li><a href="PageConnexion.php">Connexion</a></li>
-            <li><a href="PagePrestation.php">Nos prestations</a></li>
-            <li><a href="PageRealisations.php">Nos réalisations</a></li>
+            <li><a href="index.php?security=inscription">Inscription</a></li>
+            <li><a href="index.php?security=connexion">Connexion</a></li>
+            <li><a href="index.php?security=connexion">Nos prestations</a></li>
+            <li><a href="index.php?security=connexion">Nos réalisations</a></li>
+
 
         </ul>
     </nav>

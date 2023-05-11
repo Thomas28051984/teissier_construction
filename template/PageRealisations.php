@@ -3,6 +3,7 @@ require_once ('doctype.php');
 ?>
 
 <h1>Nos réalisations</h1>
+<hr>
     <p>Voici quelques photos de nos réalisations.</p>
 
 <section class="photorealisation">

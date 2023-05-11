@@ -83,5 +83,7 @@ class GestionSQL
     {
         $prepare = $this->con->prepare($query);
         $prepare->execute($avis);
+
+//        return $prepare->rowCount();
     }
 }

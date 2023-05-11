@@ -1,5 +1,5 @@
 body {
-    /*background-image: url("../images/Wallpaper/light-gray-concrete-wall-min.jpg");*/
+    background-image: url("../images/Wallpaper/light-gray-concrete-wall-min.jpg");
     text-align: center;
     font-family: sans-serif;
     color: black;
@@ -58,7 +58,8 @@ header{
     }
 
 footer{
-bottom: 0px;
+
+    margin-bottom: 0;
 }
 
 .container {
@@ -105,7 +106,6 @@ ul {
 .btn {
     text-decoration: none;
     padding: 10px;
-    font-family: arial;
     font-size: 1em;
     color: #000000;
     background-color: #548dd4;
@@ -128,7 +128,8 @@ ul {
 }
 
 .prestations{
-    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -136,3 +137,15 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
+hr{
+    height: 5px;
+    background: orange;
+}
+
+.form-control{
+   height: 15px;
+    width: 200px;
+}
+
+.form-label{}
