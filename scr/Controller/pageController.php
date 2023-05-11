@@ -35,9 +35,7 @@ class PageController extends Controller
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
                     'mail' => htmlspecialchars($mail),
-                    'password' => md5($password),
-                    'id_societe' => '1',
-                    'id_role' => '1',
+                    'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 
                 ];
 

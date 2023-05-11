@@ -9,31 +9,34 @@ class chantierController extends Controller
             $adresse = trim($request['adresse'] ?? '');
             $codepostale = trim($request['code_posale'] ?? '');
             $ville = trim($request['ville'] ?? '');
-            $messageErreur = 'Veuillez completer tous les champs';
-            $messagereussite = 'Ajout réussi !';
+            $messageErreur = '';
+            $messagereussite = '';
 
             try {
 //
 //            Je vérifie que les champs existent et qu'ils ne sont pas vide
-                if (!empty($adresse) && !empty($codepostale) && !empty($ville) && isset($_POST[$adresse]) && isset($_POST[$codepostale]) && isset($_POST[$ville])) {
+                if (!empty($adresse) && !empty($codepostale) && !empty($ville)) {
                     $data = [
                         'adresse' => htmlspecialchars($adresse),
                         'code_postale' => htmlspecialchars($codepostale),
                         'ville' => htmlspecialchars($ville),
 
                     ];
-                    var_dump($data);
+
 
                     $chantierRepository = new ChantierRepository($gestionSQL);
                     $chantierRepository->insert($data);
-
-                    echo $messagereussite;
+                    $messagereussite .= 'Inscription réussie !';
 
                 } else {
-                    echo $messageErreur;
+                    $messageErreur .= 'Veuillez completer tous les champs';
                 }
 
-                $this->render('Accueil');
+                $this->render('PageClient', [
+                    'messageErreur' => $messageErreur,
+                    'messageReussite' => $messagereussite
+                ]);
+
             } catch (Exception $exception) {
                 die($exception->getMessage());
             }
