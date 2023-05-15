@@ -19,9 +19,11 @@ require_once('scr/Controller/chantierController.php');
 require_once('scr/Repository/DocumentRepository.php');
 require_once('scr/Controller/documentController.php');
 
+
+
 try {
 
-    session_start();
+    init_php_session();
     $gestionSQL = new GestionSQL();
 
 
@@ -40,7 +42,7 @@ if (!empty($_GET['security'])) {
             break;
 
         case 'connexion':
-            $pageController->login($gestionSQL, $_POST);
+            $pageController->login($_POST);
             break;
 
         case 'deconnexion':
@@ -48,20 +50,12 @@ if (!empty($_GET['security'])) {
 
     }
 
-} elseif (!empty($_GET['immo'])) {
-    $addImmoController = new ImmoController();
+} elseif (!empty($_GET['chantier'])) {
+    $chantierController = new chantierController();
 
-    switch ($_GET['immo']) {
+    switch ($_GET['chantier']) {
         case '':
-            $addImmoController->ajouterBien($gestionSQL, $_POST);
-            break;
-    }
-} elseif (!empty($_GET['achat'])) {
-    $immoController = new ImmoController();
-
-    switch ($_GET['achat']) {
-        case '':
-            $immoController->recherche($gestionSQL, $_POST);
+            $chantierController->addchantier($gestionSQL, $_POST);
             break;
     }
 

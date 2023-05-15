@@ -1,4 +1,5 @@
 <?php
+
 class ChantierRepository
 {
 
@@ -6,7 +7,7 @@ class ChantierRepository
     {
     }
 
-    public function insert(array $data)
+    public function insert(array $data): int
     {
 //        phrase du dessous = appel la classe GestionSQL pour pouvoir utiliser les fonctions de celle ci
 //        ne pas oublier que pour utiliser $this il faut mep construct et déclarer attribut(s)

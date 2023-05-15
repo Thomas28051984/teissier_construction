@@ -6,8 +6,8 @@
         <ul>
             <li><a href="index.php?security=inscription">Inscription</a></li>
             <li><a href="index.php?security=connexion">Connexion</a></li>
-            <li><a href="index.php?security=connexion">Nos prestations</a></li>
-            <li><a href="index.php?security=connexion">Nos réalisations</a></li>
+            <li><a href="index.php?">Nos prestations</a></li>
+            <li><a href="index.php?">Nos réalisations</a></li>
 
 
         </ul>
