@@ -4,11 +4,19 @@
 class PageController extends Controller
 {
 //Je crée la méthode construct et la session start pour la connexion de l'utilisateur
-    public function __construct()
+    public function init_php_session() :bool
     {
-        if (session_status() === PHP_SESSION_NONE) {
+        if (!session_id()){
             session_start();
+            session_regenerate_id();
+
+            return true;
         }
+        return false;
+
+        $this->render('PageConnexion',[
+
+        ]);
     }
 
 
@@ -35,9 +43,7 @@ class PageController extends Controller
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
                     'mail' => htmlspecialchars($mail),
-                    'password' => md5($password),
-                    'id_societe' => '1',
-                    'id_role' => '1',
+                    'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 
                 ];
 
@@ -62,29 +68,30 @@ class PageController extends Controller
     }
 
 //    Je crée la méthode pour permettre la connexion du client
-    public function login(GestionSQL $gestionSQL, $request): void
-    {
-
-
-        $mail = trim($request['mail'] ?? '');
-        $check = new GestionSQL();
-        $data = $check->find('SELECT mail
-                                    FROM client WHERE mail = :mail', ['mail' => $mail]);
-        if (count($data) > 0) {
-            $_SESSION['mail'] = $data['mail'];
-            echo $_SESSION['mail'] = 'Connecté en tant que <br>' . $mail;
-
-            $this->redir('PageClient');
-        }
-
-        $this->render('PageConnexion');
-    }
+//    public function login($request): void
+//    {
+//        $mail = trim($request['mail'] ?? '');
+//        $check = new GestionSQL();
+//        $data.=
+//        $data = $check->find('SELECT * FROM client',$data);
+//        if (count($data) > 0) {
+//            $_SESSION['mail'] = $data['mail'];
+//            echo $_SESSION['mail'] = 'Connecté en tant que <br>' . $mail;
+//
+//
+//        }
+//
+//        $this->render('PageConnexion',[
+//
+//        ]);
+//    }
 
 
 //Je crée la méthode qui va servir de déconnexion du client sur sa session
 
-    #[NoReturn] public function logout(): void
+    public function clean_php_session(): void
     {
+        session_unset();
         // Détruire la session existante
         session_destroy();
 

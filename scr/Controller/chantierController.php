@@ -3,40 +3,42 @@
 class chantierController extends Controller
 
 {
-    public function addchantier(GestionSQL $gestionSQL, $request){
+    public function addchantier(GestionSQL $gestionSQL, $request)
+    {
 
 //        Je crée les variables du formulaire et je supprime les espaces
-            $adresse = trim($request['adresse'] ?? '');
-            $codepostale = trim($request['code_posale'] ?? '');
-            $ville = trim($request['ville'] ?? '');
-            $messageErreur = 'Veuillez completer tous les champs';
-            $messagereussite = 'Ajout réussi !';
+        $adresse = trim($request['adresse'] ?? '');
+        $codepostale = trim($request['code_posale'] ?? '');
+        $ville = trim($request['ville'] ?? '');
+        $messageErreur = '';
+        $messagereussite = '';
 
-            try {
+        try {
 //
 //            Je vérifie que les champs existent et qu'ils ne sont pas vide
-                if (!empty($adresse) && !empty($codepostale) && !empty($ville) && isset($_POST[$adresse]) && isset($_POST[$codepostale]) && isset($_POST[$ville])) {
-                    $data = [
-                        'adresse' => htmlspecialchars($adresse),
-                        'code_postale' => htmlspecialchars($codepostale),
-                        'ville' => htmlspecialchars($ville),
+            if (!empty($adresse) && !empty($codepostale) && !empty($ville)) {
+                $data = [
+                    'adresse' => htmlspecialchars($adresse),
+                    'code_postale' => htmlspecialchars($codepostale),
+                    'ville' => htmlspecialchars($ville),
+                ];
 
-                    ];
-                    var_dump($data);
+                $chantierRepository = new ChantierRepository($gestionSQL);
+                $chantierRepository->insert($data);
+                $messagereussite .= 'Votre chantier a bien été ajouté!';
 
-                    $chantierRepository = new ChantierRepository($gestionSQL);
-                    $chantierRepository->insert($data);
-
-                    echo $messagereussite;
-
-                } else {
-                    echo $messageErreur;
-                }
-
-                $this->render('Accueil');
-            } catch (Exception $exception) {
-                die($exception->getMessage());
+            } else {
+                $messageErreur .= 'Veuillez completer tous les champs!';
             }
 
+            $this->render('PageChantier', [
+                'messageErreur' => $messageErreur,
+                'messageReussite' => $messagereussite
+            ]);
+
+        } catch (Exception $exception) {
+            die($exception->getMessage());
         }
+
     }
+}
