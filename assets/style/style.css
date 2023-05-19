@@ -95,8 +95,11 @@ label {
 }
 
 #image_maçon {
-    height: 200px;
-    width: 100%
+    left: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+    /*z-index: -1;*/
 }
 
 ul {

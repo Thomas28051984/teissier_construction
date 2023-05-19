@@ -3,22 +3,6 @@
 
 class PageController extends Controller
 {
-//Je crée la méthode construct et la session start pour la connexion de l'utilisateur
-    public function init_php_session() :bool
-    {
-        if (!session_id()){
-            session_start();
-            session_regenerate_id();
-
-            return true;
-        }
-        return false;
-
-        $this->render('PageConnexion',[
-
-        ]);
-    }
-
 
     public function register(GestionSQL $gestionSQL, $request): void
     {
@@ -68,38 +52,50 @@ class PageController extends Controller
     }
 
 //    Je crée la méthode pour permettre la connexion du client
-//    public function login($request): void
-//    {
-//        $mail = trim($request['mail'] ?? '');
-//        $check = new GestionSQL();
-//        $data.=
-//        $data = $check->find('SELECT * FROM client',$data);
-//        if (count($data) > 0) {
-//            $_SESSION['mail'] = $data['mail'];
-//            echo $_SESSION['mail'] = 'Connecté en tant que <br>' . $mail;
-//
-//
-//        }
-//
-//        $this->render('PageConnexion',[
-//
-//        ]);
-//    }
-
-
-//Je crée la méthode qui va servir de déconnexion du client sur sa session
-
-    public function clean_php_session(): void
+    public function login(): void
     {
-        session_unset();
-        // Détruire la session existante
-        session_destroy();
 
-        // Rediriger vers la page index
-        header("Location: index.php");
-        exit();
+
+        if (!empty($_POST)) {
+            if (!empty($_POST['mail']) && !empty($_POST['password'])) {
+                if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+                    die("Ce n'est pas un E-mail!");
+                }
+                if (!password_verify($_POST['password'], $user['password'])) {
+                    die("L'utilisateur et/ou le mot de passe est incorrect!");
+                }
+
+                $clientRepository = new ClientRepository($gestionSQL);
+                $clientRepository->connexionUser();
+
+
+                session_start();
+                $_SESSION['user'] = [
+                    "id" => $user['id'],
+                    "nom" => $user['nom'],
+                    "prenom" => $user['prenom'],
+                    "email" => $user['mail'],
+                    "role" => $user['id_role'],
+                    "societe" => $user['id_societe']
+                ];
+
+                if ($_SESSION['id_role'] = 1) {
+                    header("location: PageClient.php");
+                } elseif ($_SESSION['id_role'] = 2) {
+                    header("location: PageAdmin.php");
+                } else {
+                    header("location: index.php");
+                }
+            }
+        }
     }
 }
+
+
+
+
+
+
 
 
 

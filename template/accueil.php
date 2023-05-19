@@ -21,19 +21,22 @@ require_once('doctype.php');
             </p>
         </div>
 
-        <div id="image_maçon">
-            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
-        </div>
-
         <div>
 
-            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a>
+            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a><br>
 
             <a href="tel:+33626953786" class="btn btn-primary">Cliquez ici pour appeler le 06 26 95 37 86</a>
 
 
         </div>
 
+        <br>
+
+        <div id="image_maçon">
+            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
+        </div>
+
+        <div>
         <?php
         foreach ($avisclients as $avis) {
 
@@ -41,6 +44,7 @@ require_once('doctype.php');
 
         }
         ?>
+        </div>
 
     </main>
 

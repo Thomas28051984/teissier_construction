@@ -14,5 +14,11 @@ class ClientRepository
         return $this->gestionSQL->insert("INSERT INTO client (`nom`, `prenom`, `mail`, `password`, `id_societe`, `id_role`) 
         VALUES (:nom, :prenom, :mail, :password, 1 , 1)", $data);
     }
-}
+
+    public function connexionUser()
+    {
+        return $this->gestionSQL->find("SELECT * FROM client WHERE mail = :mail");
+    }
+
+ }
 

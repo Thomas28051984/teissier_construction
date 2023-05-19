@@ -12,6 +12,10 @@ require_once ('doctype.php');
     </form>
 </section>
 
+<?= $messageErreurAvis ?>
+    <br>
+<?= $messageReussiteAvis ?>
+
 </body>
 
 <?php

@@ -23,7 +23,7 @@ require_once('scr/Controller/documentController.php');
 
 try {
 
-    init_php_session();
+
     $gestionSQL = new GestionSQL();
 
 
@@ -50,14 +50,6 @@ if (!empty($_GET['security'])) {
 
     }
 
-} elseif (!empty($_GET['chantier'])) {
-    $chantierController = new chantierController();
-
-    switch ($_GET['chantier']) {
-        case '':
-            $chantierController->addchantier($gestionSQL, $_POST);
-            break;
-    }
 
 } else {
     $accueilController = new AccueilController();

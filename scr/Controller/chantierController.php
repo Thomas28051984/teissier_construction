@@ -10,7 +10,7 @@ class chantierController extends Controller
         $adresse = trim($request['adresse'] ?? '');
         $codepostale = trim($request['code_posale'] ?? '');
         $ville = trim($request['ville'] ?? '');
-        $messageErreur = '';
+        $messageerreur = '';
         $messagereussite = '';
 
         try {
@@ -28,11 +28,11 @@ class chantierController extends Controller
                 $messagereussite .= 'Votre chantier a bien été ajouté!';
 
             } else {
-                $messageErreur .= 'Veuillez completer tous les champs!';
+                $messageerreur .= 'Veuillez completer tous les champs!';
             }
 
             $this->render('PageChantier', [
-                'messageErreur' => $messageErreur,
+                'messageErreur' => $messageerreur,
                 'messageReussite' => $messagereussite
             ]);
 

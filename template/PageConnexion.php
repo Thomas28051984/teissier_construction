@@ -3,6 +3,8 @@ require_once('doctype.php');
 ?>
 
     <section class="pageConnexion" role="contentinfo">
+
+
         <h4 class="connexionTitre">Me connecter à mon compte :</h4>
         <div class="mb-3 ms-5 me-5">
             <form method="post" action="">
@@ -18,8 +20,12 @@ require_once('doctype.php');
             </form>
         </div>
 
-    </section>
+<!--        --><?php //= $messageErreur ?>
+<!--        <br>-->
+<!--        --><?php //= $messageReussite ?>
 
+
+    </section>
 
 
 <?php
