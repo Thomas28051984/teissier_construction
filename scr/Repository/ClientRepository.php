@@ -15,10 +15,12 @@ class ClientRepository
         VALUES (:nom, :prenom, :mail, :password, 1 , 1)", $data);
     }
 
-    public function connexionUser()
+    public function find(array $data): int
     {
-        return $this->gestionSQL->find("SELECT * FROM client WHERE mail = :mail");
+    return $this->gestionSQL->find("SELECT * FROM client", $data);
     }
 
- }
+}
+
+
 

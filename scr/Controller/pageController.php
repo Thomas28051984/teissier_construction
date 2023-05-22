@@ -3,6 +3,22 @@
 
 class PageController extends Controller
 {
+//Je crée la méthode construct et la session start pour la connexion de l'utilisateur
+    public function init_php_session() :bool
+    {
+        if (!session_id()){
+            session_start();
+            session_regenerate_id();
+
+            return true;
+        }
+        return false;
+
+        $this->render('PageConnexion',[
+
+        ]);
+    }
+
 
     public function register(GestionSQL $gestionSQL, $request): void
     {
@@ -52,18 +68,65 @@ class PageController extends Controller
     }
 
 //    Je crée la méthode pour permettre la connexion du client
-    public function login(): void
+    public function login(GestionSQL $gestionSQL, $request): void
     {
+        global $gestionSQL;
+        $password = trim($request['password'] ?? '');
+        $userRole = 'role';
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $messageErreur = '';
+        $messageErreurMail = '';
+        $messagereussite = '';
+
+        try {
+
+//            Je vérifie que les champs ne sont pas vide
+            if (!empty($mail) && !empty($password)) {
+                //            Je vérifie que le mail est correctement tapé
+                if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                    $messageErreurMail .= 'mail invalide';
+
+                }
+
+                $data = [
+                    'mail' => htmlspecialchars($mail),
+                    'password' => htmlspecialchars($password),
+                ];
+
+                if (password_verify($password, $hashedPassword)) {
 
 
-        if (!empty($_POST)) {
-            if (!empty($_POST['mail']) && !empty($_POST['password'])) {
-                if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-                    die("Ce n'est pas un E-mail!");
+                    $clientRepository = new ClientRepository($gestionSQL);
+                    $clientRepository->find($data);
+
+                    // Authentification réussie
+                    $messagereussite .= 'Connexion réussie !';
                 }
-                if (!password_verify($_POST['password'], $user['password'])) {
-                    die("L'utilisateur et/ou le mot de passe est incorrect!");
+
+                if ($userRole == 'client') {
+                    header('location: PageClient.php');
+                } elseif ($userRole == 'admin') {
+                    header('location: PageAdmin.php');
+                } else {
+                    // Authentification échouée
+                    $messageErreur .= 'Mail et/ou mot de passe incorrect!';
                 }
+
+            }
+
+            $this->render('PageConnexion', [
+                'messageErreur' => $messageErreur,
+                'messageReussite' => $messagereussite,
+                'messageErreurMail' => $messageErreurMail
+            ]);
+        } catch (Exception $exception) {
+            die($exception->getMessage());
+        }
+
+    }
+
+
+//Je crée la méthode qui va servir de déconnexion du client sur sa session
 
                 $clientRepository = new ClientRepository($gestionSQL);
                 $clientRepository->connexionUser();
@@ -90,12 +153,6 @@ class PageController extends Controller
         }
     }
 }
-
-
-
-
-
-
 
 
 

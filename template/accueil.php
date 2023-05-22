@@ -5,6 +5,8 @@ require_once('doctype.php');
 
     <main role="main">
         <div class="histoire">
+            <h1>Accueil</h1>
+            <hr>
             <h1>Histoire de l'entreprise</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -25,22 +27,22 @@ require_once('doctype.php');
 
             <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a><br>
 
-            <a href="tel:+33626953786" class="btn btn-primary">Cliquez ici pour appeler le 06 26 95 37 86</a>
+            <a href="tel:+33626953786" class="btn btn-primary">Appeler le 06 26 95 37 86</a>
 
 
         </div>
 
         <br>
 
-        <div id="image_maçon">
-            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
-        </div>
+<!--        <div id="image_maçon">-->
+<!--            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">-->
+<!--        </div>-->
 
         <div>
         <?php
         foreach ($avisclients as $avis) {
 
-            echo '<h2>' . $avis['avis'] . '</h2>';
+            echo '<h3>' . $avis['avis'] . '</h3>';
 
         }
         ?>

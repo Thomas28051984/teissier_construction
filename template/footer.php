@@ -17,9 +17,9 @@
             </section>
             <section>
             <ul>
-                <li><a href="PageCookies.php">Cookies</a></li>
-                <li><a href="PageConfidentialite.php">Conditions générales</a></li>
-                <li><a href="Pagementionlegale.php">Mentions légales</a></li>
+                <li><a href="template/PageCookies.php">Cookies</a></li>
+                <li><a href="template/PageConfidentialite.php">Conditions générales</a></li>
+                <li><a href="template/Pagementionlegale.php">Mentions légales</a></li>
             </ul>
             </section>
 
