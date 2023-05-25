@@ -4,17 +4,26 @@
 class PageController extends Controller
 {
 //Je crée la méthode construct et la session start pour la connexion de l'utilisateur
-    public function init_php_session() :bool
+    public function init_php_session(): bool
     {
-        if (!session_id()){
+        $user = [''];
+        if (!session_id()) {
             session_start();
+            $_SESSION['user'] = [
+                "id" => $user['id'],
+                "nom" => $user['nom'],
+                "prenom" => $user['prenom'],
+                "email" => $user['mail'],
+                "role" => $user['id_role'],
+                "societe" => $user['id_societe']
+            ];
             session_regenerate_id();
 
             return true;
         }
         return false;
 
-        $this->render('PageConnexion',[
+        $this->render('PageConnexion', [
 
         ]);
     }
@@ -103,13 +112,14 @@ class PageController extends Controller
                     $messagereussite .= 'Connexion réussie !';
                 }
 
-                if ($userRole == 'client') {
+                if ($_SESSION['id_role'] = 1) {
                     header('location: PageClient.php');
-                } elseif ($userRole == 'admin') {
+                } elseif ($_SESSION['id_role'] = 2) {
                     header('location: PageAdmin.php');
                 } else {
                     // Authentification échouée
                     $messageErreur .= 'Mail et/ou mot de passe incorrect!';
+                    header("location: PageConnexion.php");
                 }
 
             }
@@ -128,31 +138,6 @@ class PageController extends Controller
 
 //Je crée la méthode qui va servir de déconnexion du client sur sa session
 
-                $clientRepository = new ClientRepository($gestionSQL);
-                $clientRepository->connexionUser();
 
-
-                session_start();
-                $_SESSION['user'] = [
-                    "id" => $user['id'],
-                    "nom" => $user['nom'],
-                    "prenom" => $user['prenom'],
-                    "email" => $user['mail'],
-                    "role" => $user['id_role'],
-                    "societe" => $user['id_societe']
-                ];
-
-                if ($_SESSION['id_role'] = 1) {
-                    header("location: PageClient.php");
-                } elseif ($_SESSION['id_role'] = 2) {
-                    header("location: PageAdmin.php");
-                } else {
-                    header("location: index.php");
-                }
-            }
-        }
-    }
 }
-
-
 

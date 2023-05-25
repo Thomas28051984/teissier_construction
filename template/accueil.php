@@ -25,7 +25,7 @@ require_once('doctype.php');
 
         <div>
 
-            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a><br>
+            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a>
 
             <a href="tel:+33626953786" class="btn btn-primary">Appeler le 06 26 95 37 86</a>
 

@@ -23,7 +23,7 @@ require_once('scr/Controller/documentController.php');
 
 try {
 
-//    init_php_session();
+
     $gestionSQL = new GestionSQL();
 
 
@@ -49,6 +49,7 @@ if (!empty($_GET['security'])) {
             $pageController->logout();
 
     }
+
 
 } elseif (!empty($_GET['chantier'])) {
     $chantierController = new chantierController();
