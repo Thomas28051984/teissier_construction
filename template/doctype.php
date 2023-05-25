@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="../assets/style/style.css">
 
 </head>
-<body>
 
 <?php
 require_once ('banniere.php');
+?>
+
+<body>

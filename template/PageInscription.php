@@ -1,42 +1,47 @@
 <?php
 require_once('doctype.php');
-require_once ('../scr/Controller/pageController.php');
-
 ?>
-<body>
 
-<h4 class="inscriptionTitre"><u>Inscription</u></h4>
-<div class="main">
-    <section class="pageInscription" role="contentinfo">
+    <div class="main">
+        <section class="pageInscription" role="contentinfo">
+            <h1>Inscription</h1>
+            <hr>
+            <h4>Je crée mon compte client:</h4>
+            <div class="mb-3 ms-5 me-5">
+                <form method="post" action="">
 
-        <div class="mb-3 ms-5 me-5">
-            <form method="post" action="">
+                    <label for="nom" class="form-label"><b>Nom</b></label>
+                    <input type="text" class="form-control" name="nom" id="nom" required>
 
-                <label for="nom" class="form-label"><b>Nom</b>
-                    <input type="text" class="form-control" name="nom"/>
-                </label>
-                <br>
-                <label for="prenom" class="form-label"><b>Prenom</b>
-                    <input type="text" class="form-control" name="prenom"/>
-                </label>
-                <br>
-                <label for="mail"><b>Mail</b>
-                    <input type="email" name="mail" class="form-control" id="exampleInputEmail1"
+                    <br>
+
+                    <label for="prénom" class="form-label"><b>Prénom</b></label>
+                    <input type="text" class="form-control" name="prénom" id="prénom" required>
+
+                    <br>
+
+                    <label for="mail" class="form-label"><b>Mail</b></label>
+                    <input type="email" name="mail" class="form-control" required id="mail"
                            aria-describedby="emailHelp"/>
-                </label>
-                <div class="mb-3">
-                    <label for="password" class="form-label"><b>Mot de passe</b>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Inscription</button>
-            </form>
-        </div>
-    </section>
-</div>
 
-</body>
+                    <div class="mb-3">
+                        <label for="password" class="form-label"><b>Mot de passe</b></label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn btn-primary">Inscription</button>
+
+                </form>
+
+                <?= $messageErreur ?>
+                <br>
+                <?= $messageReussite ?>
+
+            </div>
+        </section>
+    </div>
+
 
 <?php
-require_once ('footer.php');
-?>
+require_once('footer.php');

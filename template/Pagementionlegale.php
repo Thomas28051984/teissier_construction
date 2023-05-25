@@ -212,5 +212,5 @@ Sauf si vous décidez de désactiver les cookies, vous acceptez que le site puis
     En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de MONTPELLIER</p>
 
 
-
+</body>
 

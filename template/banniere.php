@@ -1,14 +1,15 @@
-<title>Mon agence immobilière</title>
-<a href="Accueil.php"><img src="../assets/images/home.jpg" alt="Logo entreprise" class="logoentreprise"></a>
-
 <header role="banner" class="wrapper">
-    <nav role="navigation">
+    <a href="../index.php" title="lien vers l'index">
+    <img src="../assets/images/logoentreprise.avif" alt="Logo de la société" class="logo">
+    </a>
+    <nav role="navigation" class="navigation">
         <ul>
-            <li><a href="PagePrestation.php">Nos prestations</li>
-            <li><a href="PageRealisations.php">Nos réalisations</li>
-            <li><a href="PageInscription.php">Inscription</a> </li>
-            <li><a href="PageConnexion.php">Connexion</li>
+            <li><a href="index.php?security=inscription">Inscription</a></li>
+            <li><a href="index.php?security=connexion">Connexion</a></li>
+            <li><a href="template/PagePrestation.php">Nos prestations</a></li>
+            <li><a href="template/PageRealisations.php">Nos réalisations</a></li>
+
+
         </ul>
     </nav>
-
 </header>

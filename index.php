@@ -2,17 +2,30 @@
 
 require_once('config.php');
 
-require_once('src/GestionSQL.php');
-require_once('src/Controller.php');
+require_once('scr/GestionSQL.php');
+require_once('scr/Controller.php');
+
+require_once('scr/Controller/accueilController.php');
 
 require_once('scr/Controller/pageController.php');
-require_once ('scr/Repository/ClientRepository.php');
+require_once('scr/Repository/ClientRepository.php');
+
+require_once('scr/Repository/AvisRepository.php');
+require_once('scr/Controller/avisController.php');
+
+require_once('scr/Repository/ChantierRepository.php');
+require_once('scr/Controller/chantierController.php');
+
+require_once('scr/Repository/DocumentRepository.php');
+require_once('scr/Controller/documentController.php');
+
+
 
 try {
 
-    session_start();
+
     $gestionSQL = new GestionSQL();
-    $gestionSQL->connexion();
+
 
 } catch (Exception $exception) {
     die('Merci de revenir plus tard !');
@@ -20,7 +33,7 @@ try {
 
 if (!empty($_GET['security'])) {
 
-    $pageController = new pageController();
+    $pageController = new PageController();
 
 
     switch ($_GET['security']) {
@@ -33,12 +46,25 @@ if (!empty($_GET['security'])) {
             break;
 
         case 'deconnexion':
-            $pageController->logout($gestionSQL);
+            $pageController->logout();
+
     }
-else {
-        $accueilController = new AccueilController();
-        $accueilController->accueil($gestionSQL);
+
+
+} elseif (!empty($_GET['chantier'])) {
+    $chantierController = new chantierController();
+
+    switch ($_GET['chantier']) {
+        case '':
+            $chantierController->addchantier($gestionSQL, $_POST);
+            break;
     }
+
+} else {
+    $accueilController = new AccueilController();
+    $accueilController->accueil($gestionSQL);
 }
+
+
 
 
