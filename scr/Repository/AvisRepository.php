@@ -7,12 +7,12 @@ class AvisRepository
     {
     }
 
-    public function insertavis(array $message)
+    public function insertavis(array $data)
     {
 //        phrase du dessous = appel la classe GestionSQL pour pouvoir utiliser les fonctions de celle-ci
 //        ne pas oublier que pour utiliser $this il faut mep construct et déclarer attribut(s)
         return $this->gestionSQL->insert("INSERT INTO avis_client2 (`date_publication`, `avis`,`id_societe`) 
-        VALUES ( :now, :avis, 1)");
+        VALUES ( :now, :avis, 1)", $data);
     }
 
     public function limit(int $limit)

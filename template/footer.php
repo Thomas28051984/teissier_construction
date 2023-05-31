@@ -3,7 +3,7 @@
 
             <section>
                 <hr>
-                <div><a href="PageSiteMap.php"><h3>Plan du site</h3></a></div>
+                <div><a href="pagesitemap.php"><h3>Plan du site</h3></a></div>
                 <div id="infospratique"><h3>Infos pratiques</h3>
                     <ul>
                         <li>06 26 95 37 86</li>

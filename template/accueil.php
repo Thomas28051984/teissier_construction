@@ -48,6 +48,10 @@ require_once('doctype.php');
         ?>
         </div>
 
+        <di>
+            MapBox
+        </di>
+
     </main>
 
 

@@ -1,5 +1,7 @@
 <?php
 require_once ('doctype.php');
+require_once ('scr/Controller/avisController.php');
+require_once ('scr/Repository/AvisRepository.php');
 ?>
 
 <section class="avis">

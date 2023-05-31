@@ -6,20 +6,23 @@ class avisController extends Controller
     {
         $messageErreurAvis = '';
         $messageReussiteAvis = '';
-        $message = trim(string: $request ['message'] ?? '');
+        $avis = trim(string: $request ['avis'] ?? '');
         try {
             if (!empty($message)) {
 
+                $data = [
+                    'avis' => htmlspecialchars($avis)
+                ];
 
                 $avisrepository = new AvisRepository($gestionSQL);
-                $avisrepository->insertavis($message);
+                $avisrepository->insertavis($data);
                 $messageReussiteAvis .= 'Votre avis a bien été enregistrer';
 
             } else {
                 $messageErreurAvis .= 'Veuillez completer tous les champs';
             }
             $this->render('PageAvis', [
-                'messageErreur' => $messageErreurAvis,
+                'messageErreurAvis' => $messageErreurAvis,
                 'messageReussite' => $messageReussiteAvis
             ]);
         } catch (Exception $exception) {

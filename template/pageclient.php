@@ -9,15 +9,15 @@ require_once('doctype.php');
 
     </a>
     <h2>Mes factures</h2>
-    <form action="PageFactures.php">
+    <form action="pagefactures.php">
         <button type="submit">Cliquez sur moi</button>
     </form>
     <h2>Photos chantier</h2>
-    <form action="PageAvis.php">
+    <form action="pageavis.php">
         <button type="submit">Cliquez sur moi</button>
     </form>
     <h1>Déposer un avis</h1>
-    <form action="PageAvis.php">
+    <form action="pageavis.php">
         <button type="submit">Cliquez sur moi</button>
     </form>
     </body>

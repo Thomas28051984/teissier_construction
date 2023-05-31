@@ -15,9 +15,9 @@ class ClientRepository
         VALUES (:nom, :prenom, :mail, :password, 1 , 1)", $data);
     }
 
-    public function find(array $data): int
+    function findUserByMail(string $mail): array
     {
-    return $this->gestionSQL->find("SELECT * FROM client", $data);
+        return find(' select * from user where mail = :mail', ['mail' => $mail]);
     }
 
 }

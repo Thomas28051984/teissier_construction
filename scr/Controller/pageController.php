@@ -23,7 +23,7 @@ class PageController extends Controller
         }
         return false;
 
-        $this->render('PageConnexion', [
+        $this->render('index', [
 
         ]);
     }
@@ -79,13 +79,12 @@ class PageController extends Controller
 //    Je crée la méthode pour permettre la connexion du client
     public function login(GestionSQL $gestionSQL, $request): void
     {
-        global $gestionSQL;
+
         $password = trim($request['password'] ?? '');
-        $userRole = 'role';
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $mail = trim($request['mail'] ?? '');
         $messageErreur = '';
         $messageErreurMail = '';
-        $messagereussite = '';
+        $messageReussite = '';
 
         try {
 
@@ -93,40 +92,33 @@ class PageController extends Controller
             if (!empty($mail) && !empty($password)) {
                 //            Je vérifie que le mail est correctement tapé
                 if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                    $messageErreurMail .= 'mail invalide';
-
+                    $messageErreurMail = 'mail invalide';
+                    $user = find($request,$mail);
                 }
 
-                $data = [
-                    'mail' => htmlspecialchars($mail),
-                    'password' => htmlspecialchars($password),
-                ];
-
-                if (password_verify($password, $hashedPassword)) {
-
+                if ($user && password_verify($password, $user['password'])) {
+                    $_SESSION['flash'] = "Utilisateur valid";
+                    $_SESSION['password'] = $user['password'];
 
                     $clientRepository = new ClientRepository($gestionSQL);
-                    $clientRepository->find($data);
+                    $clientRepository->findUserByMail($mail);
 
                     // Authentification réussie
-                    $messagereussite .= 'Connexion réussie !';
+                    $messageReussite = 'Connexion réussie !';
                 }
-
                 if ($_SESSION['id_role'] = 1) {
-                    header('location: PageClient.php');
+                    header("location: PageClient.php");
                 } elseif ($_SESSION['id_role'] = 2) {
-                    header('location: PageAdmin.php');
+                    header("location: PageAdmin.php");
                 } else {
                     // Authentification échouée
-                    $messageErreur .= 'Mail et/ou mot de passe incorrect!';
-                    header("location: PageConnexion.php");
+                    $messageErreur = 'Mail et/ou mot de passe incorrect!';
                 }
-
             }
 
             $this->render('PageConnexion', [
                 'messageErreur' => $messageErreur,
-                'messageReussite' => $messagereussite,
+                'messageReussite' => $messageReussite,
                 'messageErreurMail' => $messageErreurMail
             ]);
         } catch (Exception $exception) {
