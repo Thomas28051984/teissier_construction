@@ -9,20 +9,22 @@ require_once('doctype.php');
             <hr>
             <h1>Histoire de l'entreprise</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Praesent id mollis dolor. Aenean vel finibus erat. Sed sit amet pretium sapien.
-                Integer vitae consectetur felis. Morbi id ipsum in mauris dapibus euismod.
-                Nulla porta euismod nulla vitae dictum. Nulla semper luctus molestie.
-                Donec sagittis efficitur orci et condimentum. Orci varius natoque penatibus et magnis dis parturient
-                montes,
-                nascetur ridiculus mus.
-                Mauris arcu risus, venenatis et vulputate quis, semper at nisl. Etiam tincidunt leo sit amet elit
-                accumsan
-                porttitor.
-                Mauris tincidunt placerat vulputate. Fusce viverra porta magna.
+                L’entreprise TEISSIER construction à été créée le 16 mai 2014, situé au 6 CHE DE TRANSIDE ET CABRIE, 34820 TEYRAN.
+                Elle est gérée par Monsieur Lary et Kévin TEISSIER. Elle compte trois salariés maçons dont les deux gérants.
+                Monsieur Lary TEISSIER a fait l’école des compagnons du devoirs à Nîmes, et a travaillé comme salarié pour un patron où il à continuer d’apprendre le métier.
+
+                Puis il a décidé de se mettre en auto-entrepreneur pendant quelques années où il a pu faire sa clientèle et continuer d’évoluer.
+
+                Son frère jumeau, Monsieur Kévin TEISSIER, a fait ses études à la fac de science mais à décider d’en partir pour travailler pour une société qui travaille dans l’installation de canalisation d’eau. La société à déposer le bilan. Monsieur Kévin TEISSIER s’est donc retrouvé sans emploi.
+
+                Monsieur Lary TEISSIER à donc proposé à son frère jumeau de monter une entreprise dans la maçonnerie et ont donc construit l’entreprise la SARL TEISSIER Construction.
+
+                Depuis l’entreprise fonctionne très bien et continue de procéder aux chantiers qu’elle a avec ses clients dans l’hérault.
+
             </p>
         </div>
 
+<br>
         <div>
 
             <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a>
@@ -33,10 +35,11 @@ require_once('doctype.php');
         </div>
 
         <br>
+        <br>
 
-<!--        <div id="image_maçon">-->
-<!--            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">-->
-<!--        </div>-->
+        <div id="image_maçon">
+            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
+        </div>
 
         <div>
         <?php

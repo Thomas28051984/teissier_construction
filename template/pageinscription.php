@@ -29,12 +29,14 @@ require_once('doctype.php');
                         <input type="password" class="form-control" id="password" name="password" required>
 
                     </div>
+                    <br>
+                    <?= $messageErreur ?>
                     <br><br>
                     <button type="submit" class="btn btn-primary">Inscription</button>
 
                 </form>
 
-                <?= $messageErreur ?>
+
                 <br>
                 <?= $messageReussite ?>
 

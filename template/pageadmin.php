@@ -4,6 +4,8 @@ require_once ('doctype.php');
 
 <h1>Page administrateur</h1>
 
+<hr>
+
 <h2>Demande de devis</h2>
 
 <h2>Messages reçus</h2>
