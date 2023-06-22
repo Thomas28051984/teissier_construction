@@ -1,22 +1,20 @@
 <?php
 require_once ('doctype.php');
-require_once ('scr/Controller/avisController.php');
-require_once ('scr/Repository/AvisRepository.php');
 ?>
 
 <section class="avis">
-    <h1>Laissez nous votre avis:</h1>
+    <div><h1>Laissez nous votre avis:</h1></div>
+    <div>
     <form>
         <label for="avis"></label>
         <textarea id="avis" name="avis"
                   rows="5" cols="33" placeholder="Donne nous ton avis sur ton expérience avec nous..."></textarea><br>
-        <button>Déposer</button>
+        <br>
+        <button class="btn btn-primary">Déposer</button>
     </form>
+    </div>
 </section>
-
-<?= $messageErreurAvis ?>
-    <br>
-<?= $messageReussiteAvis ?>
+<br>
 
 </body>
 

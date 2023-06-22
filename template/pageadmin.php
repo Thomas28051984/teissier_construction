@@ -17,19 +17,19 @@ require_once ('doctype.php');
 <h2>Ajouter un chantier</h2>
 
     <form action="pagechantier.php">
-        <button type="submit">Ajouter</button>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
 
 <h2>Envoyer une facture</h2>
 
     <form action="pagefactures.php">
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 
 <h2>Transférer des photos</h2>
 
     <form action="pagephoto.php">
-        <button type="submit">Transférer</button>
+        <button type="submit" class="btn btn-primary">Transférer</button>
 </form>
 
 </body>

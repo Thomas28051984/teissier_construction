@@ -1,33 +1,7 @@
 <?php
 
 
-class PageController extends Controller
-{
-//Je crée la méthode construct et la session start pour la connexion de l'utilisateur
-//    public function init_php_session(): bool
-//    {
-//        $user = [''];
-//        if (!session_id()) {
-//            session_start();
-//            $_SESSION['user'] = [
-//                "id" => $user['id'],
-//                "nom" => $user['nom'],
-//                "prenom" => $user['prenom'],
-//                "email" => $user['mail'],
-//                "role" => $user['id_role'],
-//                "societe" => $user['id_societe']
-//            ];
-//            session_regenerate_id();
-//
-//            return true;
-//        }
-//        return false;
-//
-//        $this->render('index', [
-//
-//        ]);
-//    }
-
+class PageController extends Controller {
 
     public function register(GestionSQL $gestionSQL, $request): void
     {
@@ -85,56 +59,56 @@ class PageController extends Controller
     }
 
 //    Je crée la méthode pour permettre la connexion du client
-    public function login(GestionSQL $gestionSQL, $request): void
-    {
-
-
-        $password = trim($request['password'] ?? '');
-        $mail = trim($request['mail'] ?? '');
-        $messageErreur = '';
-        $messageErreurMail = '';
-        $messageReussite = '';
-
-        try {
-
-//            Je vérifie que les champs ne sont pas vide
-            if (!empty($mail) && !empty($password)) {
-                //            Je vérifie que le mail est correctement tapé
-                if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                    $messageErreurMail .= 'mail invalide';
-
-                }
-
-                if ($user && password_verify($password, $user['password'])) {
-                    $_SESSION['flash'] = "Utilisateur valid";
-                    $_SESSION['password'] = $user['password'];
-
-                    $clientRepository = new ClientRepository($gestionSQL);
-                    $clientRepository->findUserByMail($mail);
-
-                    // Authentification réussie
-                    $messageReussite .= 'Connexion réussie !';
-                }
-                if ($_SESSION['id_role'] = 1) {
-                    header("location: PageClient.php");
-                } elseif ($_SESSION['id_role'] = 2) {
-                    header("location: PageAdmin.php");
-                } else {
-                    // Authentification échouée
-                    $messageErreur .= 'Mail et/ou mot de passe incorrect!';
-                }
-            }
-
-            $this->render('PageConnexion', [
-                'messageErreur' => $messageErreur,
-                'messageReussite' => $messageReussite,
-                'messageErreurMail' => $messageErreurMail
-            ]);
-        } catch (Exception $exception) {
-            die($exception->getMessage());
-        }
-
-    }
+//    public function login(GestionSQL $gestionSQL, $request): void
+//    {
+//
+//
+//        $password = trim($request['password'] ?? '');
+//        $mail = trim($request['mail'] ?? '');
+//        $messageErreur = '';
+//        $messageErreurMail = '';
+//        $messageReussite = '';
+//
+//        try {
+//
+////            Je vérifie que les champs ne sont pas vide
+//            if (!empty($mail) && !empty($password)) {
+//                //            Je vérifie que le mail est correctement tapé
+//                if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+//                    $messageErreurMail .= 'mail invalide';
+//
+//                }
+//
+//                if ($mail && password_verify($password, $mail )) {
+//                    $_SESSION['flash'] = "Utilisateur valid";
+//                    $_SESSION['mail'] = $user['mail'];
+//
+//                    $clientRepository = new ClientRepository($gestionSQL);
+//                    $clientRepository->findUserByMail($mail);
+//
+//                    // Authentification réussie
+//                    $messageReussite .= 'Connexion réussie !';
+//                }
+//                if (1 = $_SESSION['id_role']) {
+//                    header("location: PageClient.php");
+//                } elseif (2 = $_SESSION['id_role']) {
+//                    header("location: PageAdmin.php");
+//                } else {
+//                    // Authentification échouée
+//                    $messageErreur .= 'Mail et/ou mot de passe incorrect!';
+//                }
+//            }
+//
+//            $this->render('pageconnexion', [
+//                'messageErreur' => $messageErreur,
+//                'messageReussite' => $messageReussite,
+//                'messageErreurMail' => $messageErreurMail
+//            ]);
+//        } catch (Exception $exception) {
+//            die($exception->getMessage());
+//        }
+//
+//    }
 
 
 //Je crée la méthode qui va servir de déconnexion du client sur sa session

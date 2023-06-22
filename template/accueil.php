@@ -23,7 +23,7 @@ require_once('doctype.php');
 
             </p>
         </div>
-
+<hr>
 <br>
         <div>
 
@@ -41,7 +41,11 @@ require_once('doctype.php');
             <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
         </div>
 
-        <div>
+        <h2>Les avis laissés par nos clients</h2>
+        <h4>(Les deux derniers en date)</h4>
+
+        <div class="avis">
+
         <?php
         foreach ($avisclients as $avis) {
 
@@ -51,9 +55,9 @@ require_once('doctype.php');
         ?>
         </div>
 
-        <di>
-            MapBox
-        </di>
+        <div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1ZKRNIxCRWNgXe_d8Wr9E7hxTsYmFxL4&ehbc=2E312F" width="640" height="480"></iframe>
+        </div>
 
     </main>
 
