@@ -2,7 +2,8 @@
     <a href="../index.php" title="lien vers l'accueil">
     <img src="../assets/images/logoentreprise.jpg" alt="Logo de la société" class="logo">
     </a>
-    <nav role="navigation" class="navigation">
+
+        <nav role="navigation" class="navigation">
         <ul>
             <li><a href="index.php?security=inscription">Inscription</a></li>
             <li><a href="index.php?security=connexion">Connexion</a></li>
