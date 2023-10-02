@@ -3,7 +3,9 @@ require_once('doctype.php');
 ?>
 
 <h1>Page client</h1>
-
+<!-- --><?php
+//    foreach ($clients as $client){
+//    echo $ } ?><!--</h2>-->
 <hr>
     <h1>Mes documents</h1>
 

@@ -8,13 +8,16 @@ require_once ('doctype.php');
     <form>
         <label for="avis"></label>
         <textarea id="avis" name="avis"
-                  rows="5" cols="33" placeholder="Donne nous ton avis sur ton expérience avec nous..."></textarea><br>
+                  rows="5" cols="33" placeholder="Donne nous ton avis sur ton expérience avec nous..." required></textarea><br>
         <br>
         <button class="btn btn-primary">Déposer</button>
     </form>
     </div>
 </section>
 <br>
+
+<?= $messageReussite ?>
+<?= $messageErreurAvis ?>
 
 </body>
 

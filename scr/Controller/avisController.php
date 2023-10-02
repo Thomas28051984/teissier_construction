@@ -2,16 +2,17 @@
 
 class avisController extends Controller
 {
-    public function ajoutavis(GestionSQL $gestionSQL, $request)
+    public function ajoutavis(GestionSQL $gestionSQL, $request): void
     {
         $messageErreurAvis = '';
         $messageReussiteAvis = '';
         $avis = trim(string: $request ['avis'] ?? '');
+
         try {
             if (!empty($message)) {
 
                 $data = [
-                    'avis' => htmlspecialchars($avis)
+                    'avis' => htmlspecialchars($avis), stripslashes($avis)
                 ];
 
                 $avisrepository = new AvisRepository($gestionSQL);

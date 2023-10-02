@@ -14,6 +14,7 @@ require_once ('doctype.php');
 </section>
 
 
+
 <?php
 require_once ('footer.php');
 ?>

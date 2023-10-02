@@ -58,5 +58,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Alkas-2022-2023" />
+    <orderEntry type="module" module-name="AlkasImmobilier" />
   </component>
 </module>

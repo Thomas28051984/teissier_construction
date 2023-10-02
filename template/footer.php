@@ -1,10 +1,10 @@
 <footer role="contentinfo">
     <div class="footer-basic">
 
-            <section>
-                <hr>
-                <div><a href="pagesitemap.php"><h3>Plan du site</h3></a></div>
-                <div id="infospratique"><h3>Infos pratiques</h3>
+            <section class="infospratique">
+
+                <a href="pagesitemap.php"><h3>Plan du site</h3></a>
+                <p><h3>Infos pratiques</h3></p>
                     <ul>
                         <li>06 26 95 37 86</li>
                         <li>6 chemin de transide et cabrie</li>
@@ -13,17 +13,17 @@
                         <li>08:00 - 18:00</li>
 
                     </ul>
-                </div>
-            </section>
-            <section>
-            <ul>
-                <li><a href="template/PageCookies.php">Cookies</a></li>
-                <li><a href="template/PageConfidentialite.php">Conditions générales</a></li>
-                <li><a href="template/Pagementionlegale.php">Mentions légales</a></li>
-            </ul>
+
+                    <ul>
+                        <li><a href="../template/pagecookies.php">Cookies</a></li>
+                        <li><a href="../template/pageconfidentialite.php">Conditions générales</a></li>
+                        <li><a href="../template/pagementionlegale.php">Mentions légales</a></li>
+                    </ul>
+                    <p><b>Copyright © <?php echo date("Y"); ?> TEISSIER Construction</b></p>
+
+
             </section>
 
-        <p><b>Copyright © <?php echo date("Y"); ?> TEISSIER Construction</b></p>
     </div>
 
 </footer>

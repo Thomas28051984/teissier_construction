@@ -9,27 +9,28 @@ require_once('doctype.php');
             <hr>
             <h1>Histoire de l'entreprise</h1>
             <p>
-                L’entreprise TEISSIER construction à été créée le 16 mai 2014, situé au 6 CHE DE TRANSIDE ET CABRIE, 34820 TEYRAN.
-                Elle est gérée par Monsieur Lary et Kévin TEISSIER. Elle compte trois salariés maçons dont les deux gérants.
-                Monsieur Lary TEISSIER a fait l’école des compagnons du devoirs à Nîmes, et a travaillé comme salarié pour un patron où il à continuer d’apprendre le métier.
+                L’entreprise TEISSIER construction a été créée le 16 mai 2014, situé au 6 CHE DE TRANSIDE ET CABRIE,
+                34820 TEYRAN. <br>
+                Elle est gérée par Monsieur Lary et Kévin TEISSIER. Elle compte quatres salariés maçons dont les deux
+                gérants. <br>
+                Monsieur Lary TEISSIER a fait l’école des compagnons du devoirs à Nîmes, et a travaillé comme salarié
+                pour un patron où il à continuer d’apprendre le métier. <br>
 
-                Puis il a décidé de se mettre en auto-entrepreneur pendant quelques années où il a pu faire sa clientèle et continuer d’évoluer.
+                Puis il a décidé de se mettre en auto-entrepreneur pendant quelques années où il a pu faire sa clientèle
+                et continuer d’évoluer. <br>
 
-                Son frère jumeau, Monsieur Kévin TEISSIER, a fait ses études à la fac de science mais à décider d’en partir pour travailler pour une société qui travaille dans l’installation de canalisation d’eau. La société à déposer le bilan. Monsieur Kévin TEISSIER s’est donc retrouvé sans emploi.
-
-                Monsieur Lary TEISSIER à donc proposé à son frère jumeau de monter une entreprise dans la maçonnerie et ont donc construit l’entreprise la SARL TEISSIER Construction.
-
-                Depuis l’entreprise fonctionne très bien et continue de procéder aux chantiers qu’elle a avec ses clients dans l’hérault.
+                Monsieur Lary TEISSIER a fini par proposer à son frère jumeau de monter une entreprise dans la maçonnerie et
+                ont donc fondé l’entreprise SARL TEISSIER Construction.
 
             </p>
         </div>
-<hr>
-<br>
+        <hr>
+        <br>
         <div>
 
-            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi !</a>
+            <a href="mailto:votreadresse@mail.fr" class="btn btn-primary">Contactez-moi par mail</a>
 
-            <a href="tel:+33626953786" class="btn btn-primary">Appeler le 06 26 95 37 86</a>
+            <a href="tel:+33626953786" class="btn btn-primary">Appeler directement le 06 26 95 37 86</a>
 
 
         </div>
@@ -46,17 +47,20 @@ require_once('doctype.php');
 
         <div class="avis">
 
-        <?php
-        foreach ($avisclients as $avis) {
+            <?php
+            foreach ($avisclients as $avis) {
+                echo '<h2>' . $avis['date_publication'] . '</h2>';
 
-            echo '<h3>' . $avis['avis'] . '</h3>';
+                echo '<h3>' . $avis['avis'] . '</h3>';
 
-        }
-        ?>
+            }
+            ?>
+
         </div>
-
+        <br>
         <div>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1ZKRNIxCRWNgXe_d8Wr9E7hxTsYmFxL4&ehbc=2E312F" width="640" height="480"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1ZKRNIxCRWNgXe_d8Wr9E7hxTsYmFxL4&ehbc=2E312F"
+                    width="640" height="480"></iframe>
         </div>
 
     </main>

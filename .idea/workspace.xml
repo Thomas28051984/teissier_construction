@@ -6,33 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="2f53afc0-7bc8-4193-8967-955a2e9b2734" name="Changes" comment="Avancé des travaux du site">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_16_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_16_56__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_21_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_21_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/teissier_construction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teissier_construction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scr/Controller/avisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/scr/Controller/avisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scr/Controller/chantierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/scr/Controller/chantierController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scr/Controller/pageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/scr/Controller/pageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/scr/Repository/AvisRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scr/Repository/ClientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/scr/Repository/ClientRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageadmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageAvis.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageavis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageChantier.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagechantier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageclient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageConfidentialite.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageconfidentialite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageconnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagecookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageFactures.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagefactures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageInscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageinscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PagePhotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagephoto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PagePrestation.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageprestation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageRealisations.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagerealisations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/PageSiteMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagesitemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/Pagementionlegale.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagementionlegale.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/doctype.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/doctype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/banniere.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/banniere.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pageavis.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageavis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pagechantier.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagechantier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pageclient.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageclient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pageconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageconnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pageinscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageinscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pagerealisations.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pagerealisations.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +49,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Dev_portable" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,16 +130,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Dev__portable",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/dev/AlkasImmobilier",
+    "last_opened_file_path": "C:/dev/site_teissier_construcion",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -202,6 +194,23 @@
       <workItem from="1685003103723" duration="240000" />
       <workItem from="1685449146553" duration="2331000" />
       <workItem from="1685537867545" duration="4625000" />
+      <workItem from="1686044124354" duration="3394000" />
+      <workItem from="1686313870497" duration="4253000" />
+      <workItem from="1687167320499" duration="6418000" />
+      <workItem from="1687267921942" duration="21433000" />
+      <workItem from="1687435486387" duration="5254000" />
+      <workItem from="1687720123454" duration="1474000" />
+      <workItem from="1687722914374" duration="653000" />
+      <workItem from="1687723728823" duration="296000" />
+      <workItem from="1687770579689" duration="64000" />
+      <workItem from="1687771525829" duration="6154000" />
+      <workItem from="1688371459327" duration="4848000" />
+      <workItem from="1688464896553" duration="1357000" />
+      <workItem from="1689348042588" duration="4000" />
+      <workItem from="1689414175239" duration="59000" />
+      <workItem from="1689414252669" duration="21781000" />
+      <workItem from="1689481745036" duration="10728000" />
+      <workItem from="1690142014928" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="Avancé des travaux du site">
       <created>1682430742764</created>
@@ -294,7 +303,37 @@
       <option name="project" value="LOCAL" />
       <updated>1684509376595</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Avancé des travaux du site">
+      <created>1687273257684</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1687273257684</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Avancé des travaux du site">
+      <created>1687444304060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1687444304061</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Avancé des travaux du site">
+      <option name="closed" value="true" />
+      <created>1687789565626</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1687789565626</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Avancé des travaux du site">
+      <option name="closed" value="true" />
+      <created>1688414748520</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688414748520</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

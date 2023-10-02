@@ -21,6 +21,8 @@ require_once('doctype.php');
 <?= $messageerreur ?>
     <br>
 <?= $messagereussite ?>
+    <br>
+<?= $erreurchantier ?>
 
 <?php
 require_once('footer.php');

@@ -1,7 +1,9 @@
 <?php
 
+session_start();
 
-class PageController extends Controller {
+class PageController extends Controller
+{
 
     public function register(GestionSQL $gestionSQL, $request): void
     {
@@ -11,7 +13,7 @@ class PageController extends Controller {
         $mail = trim($request['mail'] ?? '');
         $password = trim($request['password'] ?? '');
 
-        //je crée les varibles de mes messages vides à afficher dans le render
+        //je crée les variables de mes messages vides à afficher dans le render
         $messageErreur = '';
         $messagereussite = '';
 
@@ -19,7 +21,7 @@ class PageController extends Controller {
 
 //            Je vérifie que les champs existent et qu'ils ne sont pas vide
             if (!empty($password) && !empty($prenom) && !empty($nom) && !empty($mail)) {
-                //            Je vérifie que le mail est correctement tapé
+//            Je vérifie que le mail est correctement tapé
                 if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
                     $messageErreur .= 'mail invalide';
 
@@ -30,7 +32,7 @@ class PageController extends Controller {
                     'nom' => htmlspecialchars($nom),
                     'prenom' => htmlspecialchars($prenom),
                     'mail' => htmlspecialchars($mail),
-                    //Je hash le password afin de le protéger contre les utilisitateurs malveillants
+                    //Je hash le password afin de le protéger contre les utilisateurs malveillants
                     'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 
                 ];
@@ -47,7 +49,7 @@ class PageController extends Controller {
                 $messageErreur .= 'Veuillez completer tous les champs';
 
             }
-                // Et j'envoie tout sur ma page inscription
+            // Et j'envoie tout sur ma page inscription
             $this->render('PageInscription', [
                 'messageErreur' => $messageErreur,
                 'messageReussite' => $messagereussite
@@ -61,13 +63,13 @@ class PageController extends Controller {
 //    Je crée la méthode pour permettre la connexion du client
     public function login(GestionSQL $gestionSQL, $request): void
     {
-
-
         $password = trim($request['password'] ?? '');
         $mail = trim($request['mail'] ?? '');
         $messageErreur = '';
         $messageErreurMail = '';
         $messageReussite = '';
+        $user = [''];
+        $_SESSION['id_role'] = '0';
 
         try {
 
@@ -79,7 +81,7 @@ class PageController extends Controller {
 
                 }
 
-                if ($mail && password_verify($password, $mail )) {
+                if ($mail && password_verify($password, $mail)) {
                     $_SESSION['flash'] = "Utilisateur valid";
                     $_SESSION['mail'] = $user['mail'];
 
@@ -89,10 +91,11 @@ class PageController extends Controller {
                     // Authentification réussie
                     $messageReussite .= 'Connexion réussie !';
                 }
-                if (client = $_SESSION['id_role']) {
+
+                if ('client' == $_SESSION['id_role']) {
                     header("location: PageClient.php");
-                        die();
-                } elseif (admin = $_SESSION['id_role']) {
+                    die();
+                } elseif ('admin' == $_SESSION['id_role']) {
                     header("location: PageAdmin.php");
                     die();
                 } else {
@@ -115,6 +118,24 @@ class PageController extends Controller {
 
 //Je crée la méthode qui va servir de déconnexion du client sur sa session
 
+    public function logout() {
+        // Supprimer toutes les variables de session
+        $_SESSION = array();
+
+        // Si vous utilisez des cookies de session, détruisez-les également
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
+        }
+
+        // Détruire la session
+        session_destroy();
+
+        echo "Déconnexion réussie !";
+    }
 
 }
 

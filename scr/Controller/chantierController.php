@@ -12,16 +12,21 @@ class chantierController extends Controller
         $ville = trim($request['ville'] ?? '');
         $messageerreur = '';
         $messagereussite = '';
+        $erreurchantier = '';
 
         try {
 //
 //            Je vérifie que les champs existent et qu'ils ne sont pas vide
+
             if (!empty($adresse) && !empty($codepostale) && !empty($ville)) {
                 $data = [
                     'adresse' => htmlspecialchars($adresse),
                     'code_postale' => htmlspecialchars($codepostale),
                     'ville' => htmlspecialchars($ville),
                 ];
+                    if ($data('adresse') >0 && $data('code_postale') >0 && $data('ville') >0){
+                        $erreurchantier .= 'Ce chantietr exite déjà';
+                    }
 
                 $chantierRepository = new ChantierRepository($gestionSQL);
                 $chantierRepository->insert($data);
@@ -33,7 +38,8 @@ class chantierController extends Controller
 
             $this->render('PageChantier', [
                 'messageErreur' => $messageerreur,
-                'messageReussite' => $messagereussite
+                'messageReussite' => $messagereussite,
+                'erreurchantier' => $erreurchantier
             ]);
 
         } catch (Exception $exception) {
