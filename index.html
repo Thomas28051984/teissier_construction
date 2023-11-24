@@ -19,6 +19,9 @@ require_once('scr/Repository/AvisRepository.php');
 require_once('scr/Controller/chantierController.php');
 require_once('scr/Repository/ChantierRepository.php');
 
+require_once ('scr/Controller/connexionController.php');
+require_once ('scr/Controller/logoutController.php');
+
 try {
 
 
@@ -32,6 +35,8 @@ try {
 if (!empty($_GET['security'])) {
 
     $pageController = new PageController();
+    $connexionController = new connexionController();
+    $logoutController = new logoutController();
     $avisController = new  AvisController();
     $chantierController = new ChantierController();
 
@@ -42,11 +47,11 @@ if (!empty($_GET['security'])) {
             break;
 
         case 'connexion':
-            $pageController->login($gestionSQL, $_POST);
+            $connexionController->login($gestionSQL, $_POST);
             break;
 
         case 'deconnexion':
-            $pageController->logout();
+            $logoutController->logout();
             break;
     }
 

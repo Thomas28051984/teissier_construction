@@ -8,7 +8,7 @@
         <span></span>
 
         <!-- logo -->
-        <a href="../index.php" title="lien vers l'accueil">
+        <a href="../index.html" title="lien vers l'accueil">
             <img src="../assets/images/logoentreprise.jpg" alt="Logo de la société" class="logo">
         </a>
 
@@ -16,14 +16,10 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="pageprestation.php">
-                        Nos prestations
-                    </a>
+                    <a href="pageprestation.php">Nos prestations</a>
                 </li>
                 <li>
-                    <a href="pagerealisations.php">
-                        Nos réalisations
-                    </a>
+                    <a href="pagerealisations.php">Nos réalisations</a>
                 </li>
 
             </ul>

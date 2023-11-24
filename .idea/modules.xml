@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Alkas-2022-2023/.idea/Alkas-2022-2023.iml" filepath="$PROJECT_DIR$/../Alkas-2022-2023/.idea/Alkas-2022-2023.iml" />
       <module fileurl="file://$USER_HOME$/Documents/GitHub/AlkasImmobilier/.idea/AlkasImmobilier.iml" filepath="$USER_HOME$/Documents/GitHub/AlkasImmobilier/.idea/AlkasImmobilier.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/teissier_construction.iml" filepath="$PROJECT_DIR$/.idea/teissier_construction.iml" />
     </modules>

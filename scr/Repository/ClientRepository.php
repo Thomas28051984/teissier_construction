@@ -15,12 +15,7 @@ class ClientRepository
         VALUES (:nom, :prenom, :mail, :password, 1 , 1)", $data);
     }
 
-    function findUserByMail(array $): array
+    public function findUserByMail(string $data)
     {
-        return $this->gestionSQL->find("SELECT * FROM client WHERE mail = ?');
+        return $this->gestionSQL->find("SELECT * FROM client WHERE mail = ?");
     }
-
-}
-
-
-

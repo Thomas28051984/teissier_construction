@@ -18,7 +18,5 @@ class AccueilController extends Controller
             die($exception->getMessage());
         }
     }
-
-
 }
 

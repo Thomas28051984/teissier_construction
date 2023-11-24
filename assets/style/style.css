@@ -3,13 +3,13 @@ body {
     font-family: sans-serif;
     color: black;
     margin: 0;
-    background-color: #cccccc;
+    background-image: url(/assets/images/Wallpaper/crépi_texture.jpg);
 }
 
 .wrapper {
     justify-content: space-between;
     background-color: darkorange;
-    }
+}
 
 .logo {
     width: 300px;
@@ -176,8 +176,8 @@ hr {
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
     opacity 0.55s ease;
 }
 
@@ -191,7 +191,7 @@ hr {
 
 .menu-container input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(3px,-1px);
+    transform: rotate(45deg) translate(3px, -1px);
     background: #232323;
 }
 
@@ -201,7 +201,7 @@ hr {
 }
 
 .menu-container input:checked ~ span:nth-child(3) {
-    transform: rotate(-45deg) translate(-5px,11px);
+    transform: rotate(-45deg) translate(-5px, 11px);
 }
 
 .menu ul {
@@ -246,7 +246,7 @@ hr {
         /* to stop flickering of text in safari */
         transform-origin: 0 0;
         transform: translateX(0%);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 
     .menu-container input:checked ~ .menu {
@@ -290,13 +290,98 @@ hr {
     }
 }
 
-a:link
-{
-    text-decoration:none;
+a:link {
+    text-decoration: none;
 }
 
-.avis
-{
+.avis {
 
 }
 
+.carousel {
+    padding: 20px;
+    perspective: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel > * {
+    flex: 0 0 auto;
+}
+
+.carousel figure {
+    margin: 0;
+    width: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: 50% 50% -482.8427124746px;
+}
+
+.carousel figure img {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    opacity: 0.9;
+}
+
+.carousel figure img:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 50% 50% -482.8427124746px;
+}
+
+.carousel figure img:nth-child(2) {
+    transform: rotateY(0.7853981634rad);
+}
+
+.carousel figure img:nth-child(3) {
+    transform: rotateY(1.5707963268rad);
+}
+
+.carousel figure img:nth-child(4) {
+    transform: rotateY(2.3561944902rad);
+}
+
+.carousel figure img:nth-child(5) {
+    transform: rotateY(3.1415926536rad);
+}
+
+.carousel figure img:nth-child(6) {
+    transform: rotateY(3.926990817rad);
+}
+
+.carousel figure img:nth-child(7) {
+    transform: rotateY(4.7123889804rad);
+}
+
+.carousel figure img:nth-child(8) {
+    transform: rotateY(5.4977871438rad);
+}
+
+.carousel nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+.carousel nav button {
+    flex: 0 0 auto;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #333;
+    background-color: darkorange;
+    border: 1px solid;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+.nav_prev {
+    background-color: darkorange;
+}
+
+.nav_next {
+    background-color: darkorange;
+}
