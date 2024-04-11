@@ -38,10 +38,6 @@ require_once('doctype.php');
         <br>
         <br>
 
-        <div id="image_maçon">
-            <img src="../assets/images/industrial-builder.jpg" alt="image maçon">
-        </div>
-
         <h2>Les avis laissés par nos clients</h2>
         <h4>(Les deux derniers en date)</h4>
 

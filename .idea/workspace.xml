@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2f53afc0-7bc8-4193-8967-955a2e9b2734" name="Changes" comment="Avancé des travaux du site">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_16_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_16_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_21_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2023_21_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/pageprestation.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageprestation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pageconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/pageconnexion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/site_vitrine/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/site_vitrine/vendor/doctrine/deprecations" />
@@ -127,7 +125,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -148,6 +146,13 @@
       <recent name="C:\dev\site_teissier_construcion\template" />
       <recent name="C:\dev\site_teissier_construcion\assets" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -212,6 +217,9 @@
       <workItem from="1700663178032" duration="6765000" />
       <workItem from="1704026687186" duration="599000" />
       <workItem from="1704032816622" duration="61000" />
+      <workItem from="1707843692375" duration="67000" />
+      <workItem from="1707843781371" duration="394000" />
+      <workItem from="1708975499301" duration="540000" />
     </task>
     <task id="LOCAL-00001" summary="Avancé des travaux du site">
       <created>1682430742764</created>
